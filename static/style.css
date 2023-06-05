@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Cake4Freaks-Regular';
+    src: url('./fonts/Cake4Freaks-Regular.woff') format('woff');
+    font-weight: regular;
+}
+
+body {
+    font-family: Cake4Freaks-Regular;
+    color: white;
+    background-color: black;
+    margin: 200px auto;
+    font-size: 34px;
+    width: 900px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: pink;
+}
