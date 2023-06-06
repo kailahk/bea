@@ -1,31 +1,40 @@
 @font-face {
     font-family: 'Cake4Freaks-Regular';
-    src: url('./fonts/Cake4Freaks-Regular.woff') format('woff');
-    font-weight: regular;
+    src: url('./fonts/Cake4Freaks-Regular.otf');
+    font-weight: 400;
 }
 
 body {
     font-family: Cake4Freaks-Regular;
     color: white;
     background-color: black;
-    margin: 190px auto;
-    font-size: 34px;
-    width: 900px;
+    margin: 10vw auto;
+    font-size: 2rem;
+    width: 55vw;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: #FAFAFA;
 }
 
 a:hover {
     color: pink;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1000px) {
     body {
-        margin: 80px auto;
-        font-size: 20px;
-        width: 350px;
+        font-size: 3vmin;
+        margin: 75px auto;
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        margin: 30px auto;
+        width: 80vw;
+        font-size: 5vmin;
     }
 }
