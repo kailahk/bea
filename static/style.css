@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Cake4Freaks-Regular';
-    src: url('./fonts/Cake4Freaks-Regular.otf');
+    src: url('./fonts/Cake4Freaks-Regular.woff');
     font-weight: 400;
 }
 
@@ -8,9 +8,9 @@ body {
     font-family: Cake4Freaks-Regular;
     color: white;
     background-color: black;
-    margin: 10vw auto;
+    margin: 150px auto;
     font-size: 2rem;
-    width: 55vw;
+    width: 950px;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -23,11 +23,11 @@ a:hover {
     color: pink;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
     body {
-        font-size: 3vmin;
-        margin: 75px auto;
-        width: 80vw;
+        font-size: 2rem;
+        margin: 12.5vw auto;
+        width: 78vw;
     }
 }
 
