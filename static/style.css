@@ -4,14 +4,29 @@
     font-weight: 400;
 }
 
-body {
+* {
+    -webkit-font-smoothing: antialiased;
     font-family: Cake4Freaks-Regular;
+    font-weight: 400;
+
+}
+
+body {
     color: white;
     background-color: black;
     margin: 150px auto;
     font-size: 2rem;
     width: 950px;
-    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    margin-top: 20px;
+    background-color: black;
+    border:none;
+    color: #FAFAFA;
+    font-size: 4rem;
 }
 
 a {
