@@ -30,7 +30,7 @@ body {
 }
 
 .heading {
-    padding-top: 80px;
+    padding-top: 60px;
     display: grid;
     grid-template-columns: repeat(23, 31.5px);
     grid-template-rows: auto;
@@ -197,7 +197,7 @@ textarea:focus {
 
 a {
     text-decoration: none;
-    color: #FAFAFA;
+    color: inherit;
 }
 
 a:hover {
@@ -230,7 +230,8 @@ a:hover {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: white;
+    background: black;
+    border: 1px solid white;
     cursor: pointer;
 }
 
@@ -338,7 +339,10 @@ p.test {
     display: block;
 }
 
-.dropdown-content p:hover {background-color: rgb(44, 44, 44);}
+.dropdown-content p:hover {
+    opacity: .7;
+    cursor: pointer;
+}
 
 .dropdown-content > p {
     margin: 5px 0;
@@ -353,4 +357,14 @@ p.test {
 .henmania-section > div > .dropdown-content {
     left: 222px;
     bottom: 8px;
+}
+
+#sun-and-moon {
+    width: 100%;
+    text-align: right;
+    padding: 10px 10px 0 0;
+}
+
+#sun-and-moon > img {
+    height: 20px
 }
