@@ -121,7 +121,7 @@ body {
     display: flex;
     font-size: 17px;
     text-align: left;
-    line-height: 24px;
+    line-height: 21px;
 }
 
 .contact-info>p {
@@ -155,12 +155,15 @@ body {
     letter-spacing: 4px;
 }
 
+.cake4freaks-section h3 {
+    font-feature-settings:"case";
+}
+
 .font-textarea-container {
     border: 1px solid white;
     background-color: inherit;
-    height: fit-content;
     overflow-x: scroll;
-    padding-left: 10px;
+    padding-left: 15px;
     display: flex;
     align-items: flex-start;
     margin-top: 8px;
@@ -168,6 +171,7 @@ body {
 
 textarea {
     min-width: 712px;
+    min-height: 135px;
     height: 135px;
     background-color: black;
     border-style: none;
@@ -180,8 +184,13 @@ textarea:focus {
 }
 
 .size-option>label {
-    font-size: 14px;
-    letter-spacing: 1.5px;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.leading-option>label {
+    font-size: 16px;
+    letter-spacing: 2px;
 }
 
 .options {
@@ -244,12 +253,8 @@ a:hover {
 
 .font-text {
     margin-top: 15px;
-    line-height: 28px;
-}
-
-p.test {
-    font-feature-settings: "case" 1;
-    /* figures old-style tabular lining proportional */
+    line-height: 130%;
+    font-size: 22px;
 }
 
 #henmania-input {
@@ -308,11 +313,16 @@ p.test {
     text-align: left;
     padding: 0 40px;
     font-size: 22px;
+    line-height: 130%;
 }
 
 .tumblr {
     margin: 30px 0;
     display: flex;
+}
+
+.tumblr > a {
+    margin-left: 5px;
 }
 
 .dropdown {
@@ -337,6 +347,7 @@ p.test {
     color: white;
     padding: 0 10px;
     display: block;
+    font-feature-settings:"case";
 }
 
 .dropdown-content p:hover {
@@ -367,4 +378,32 @@ p.test {
 
 #sun-and-moon > img {
     height: 20px
+}
+
+.type-design {
+    letter-spacing: 0;
+    font-size: 22px;
+}
+
+p.test, p.no-test {
+    font-family: Henmania-Black;
+}
+p.test {
+    /* cake4freaks */
+    /* none */
+    /* lnum - lining figures */
+    /* onum - oldstyle figures */
+    /* pnum - proportional figures */
+    /* tnum - tabular figures */
+    /* case - case sensitive */
+    /* either onum or lnum // either pnum or tnum */
+
+    font-family: Henmania-Black;
+    font-feature-settings:"ss03";
+    /* henmania */
+    /* onum - oldstyle figures */
+    /* liga - ligatures */
+    /* ss01 - alt g */
+    /* ss02 - alt uvwy */
+    /* ss03 - alt e */
 }

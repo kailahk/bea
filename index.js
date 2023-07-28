@@ -12,6 +12,7 @@ const bodyEl = document.getElementById('body');
 
 slider1.addEventListener('input', function () {
   cake4freaksElement.style.fontSize = this.value + 'px';
+  cake4freaksElement.style.lineHeight = parseInt(this.value)*1.2 + 'px';
 });
 
 slider2.addEventListener('input', function () {
