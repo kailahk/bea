@@ -134,7 +134,9 @@ body {
     padding-left: 1px;
 }
 
-.cake4freaks-section, .henmania-section, .bea-section {
+.cake4freaks-section,
+.henmania-section,
+.bea-section {
     width: 724.5px;
     text-align: left;
     padding-top: 80px;
@@ -143,10 +145,11 @@ body {
 .bea-section {
     text-align: center;
     padding-bottom: 80px;
-    padding-top:60px;
+    padding-top: 60px;
 }
 
-.cake4freaks-section h3, .henmania-section h3 {
+.cake4freaks-section h3,
+.henmania-section h3 {
     font-size: 28px;
     margin: 0;
     letter-spacing: 4px;
@@ -274,6 +277,7 @@ p.test {
     display: flex;
     justify-content: space-between;
 }
+
 .bea .bottom-row {
     grid-row: 13;
     grid-column: 1 / 10;
@@ -285,6 +289,7 @@ p.test {
     display: flex;
     flex-direction: column;
 }
+
 .bea .right-rows {
     grid-column: 9;
     grid-row: 3 / 12;
@@ -307,4 +312,45 @@ p.test {
 .tumblr {
     margin: 30px 0;
     display: flex;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border: 1px solid white;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content p {
+    color: white;
+    padding: 0 10px;
+    display: block;
+}
+
+.dropdown-content p:hover {background-color: rgb(44, 44, 44);}
+
+.dropdown-content > p {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+.cake4freaks-section > div > .dropdown-content {
+    left: 275px;
+    bottom: 8px;
+}
+
+.henmania-section > div > .dropdown-content {
+    left: 222px;
+    bottom: 8px;
 }
