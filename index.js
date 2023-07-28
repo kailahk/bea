@@ -1,9 +1,12 @@
-// Get references to the slider and the element whose font-size will be changed
-const slider = document.getElementById('slider');
-const nameElement = document.getElementById('new-font');
+const slider1 = document.getElementById('slider-1');
+const slider2 = document.getElementById('slider-2');
+const cake4freaksElement = document.getElementById('cake4freaks-input');
+const henmaniaElement = document.getElementById('henmania-input');
 
-// Add an event listener to the slider for the "input" event
-slider.addEventListener('input', function() {
-  // Update the font-size of the element based on the slider value
-  nameElement.style.fontSize = this.value + 'px';
+slider1.addEventListener('input', function() {
+  cake4freaksElement.style.fontSize = this.value + 'px';
 });
+
+slider2.addEventListener('input', function() {
+  henmaniaElement.style.fontSize = this.value + 'px';
+})

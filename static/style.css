@@ -10,37 +10,186 @@
     font-weight: 400;
 }
 
-#new-font {
-    font-family: Henmania-Black;
-    font-size: 8rem;
-    padding: 2rem;
-    border-style: none;
-    height: 8rem;
-}
-
 * {
     -webkit-font-smoothing: antialiased;
     font-family: Cake4Freaks-Regular;
     font-weight: 400;
-
+    box-sizing: border-box;
 }
 
 body {
     color: white;
     background-color: black;
-    margin: 150px auto;
-    font-size: 2rem;
-    width: 950px;
+    font-size: 23px;
+    height: 1000px;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+}
+
+.heading {
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(23, 31.5px);
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+.heading .top-rows {
+    grid-row: 1 / 3;
+    grid-column: 1 / 24;
+}
+
+.heading>* {
+    line-height: 28px;
+    letter-spacing: 1.5px;
+}
+
+.heading .left-rows {
+    grid-row: 3 / 6;
+    grid-column: 1 / 9;
+}
+
+.heading .right-rows {
+    grid-row: 3 / 6;
+    grid-column: 16 / 24;
+}
+
+.heading .bottom-rows {
+    grid-row: 6 / 8;
+    grid-column: 1 / 24;
+}
+
+.heading .heading-name {
+    grid-row: 3 / 6;
+    grid-column: 9 / 16;
+    margin-top: 16px;
+}
+
+.heading-name>p {
+    margin: 0;
+}
+
+.heading-name .name {
+    letter-spacing: 4px;
+}
+
+.contact {
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(23, 31.5px);
+    grid-template-rows: repeat(7, 28px);
+    align-items: center;
+    letter-spacing: 1.5px;
+}
+
+.contact>* {
+    line-height: 28px;
+    letter-spacing: 1.5px;
+}
+
+.contact .top-row {
+    grid-row: 1;
+    grid-column: 1 / 24;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .left-row {
+    grid-column: 1 / 1;
+    grid-row: 2 / 7;
+}
+
+.contact .right-row {
+    grid-column: 23;
+    grid-row: 2 / 7;
+}
+
+.contact .bottom-row {
+    grid-column: 1 / 24;
+    grid-row: 7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    grid-column: 3 / 22;
+    grid-row: 2 / 7;
+    display: flex;
+    font-size: 17px;
+    text-align: left;
+    line-height: 24px;
+}
+
+.contact-info>p {
+    margin: 0;
+}
+
+.email {
+    font-size: 20px;
+    margin-top: 3px;
+    padding-left: 1px;
+}
+
+.cake4freaks-section, .henmania-section, .bea-section {
+    width: 724.5px;
+    text-align: left;
+    padding-top: 80px;
+}
+
+.bea-section {
+    text-align: center;
+    padding-bottom: 80px;
+    padding-top:60px;
+}
+
+.cake4freaks-section h3, .henmania-section h3 {
+    font-size: 28px;
+    margin: 0;
+    letter-spacing: 4px;
+}
+
+.font-textarea-container {
+    border: 1px solid white;
+    background-color: inherit;
+    height: fit-content;
+    overflow-x: scroll;
+    padding-left: 10px;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 8px;
 }
 
 textarea {
-    margin-top: 20px;
+    min-width: 712px;
+    height: 135px;
     background-color: black;
-    border: none;
-    color: #FAFAFA;
-    font-size: 4rem;
+    border-style: none;
+    color: white;
+    font-size: 80px;
+}
+
+textarea:focus {
+    outline: 0;
+}
+
+.size-option>label {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+}
+
+.options {
+    margin-top: 10px;
+    display: flex;
+}
+
+.options>* {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
 }
 
 a {
@@ -52,57 +201,110 @@ a:hover {
     color: pink;
 }
 
-@media screen and (max-width: 1200px) {
-    body {
-        font-size: 2rem;
-        margin: 12.5vw auto;
-        width: 78vw;
-    }
+.size-option {
+    width: 260px;
 }
 
-@media screen and (max-width: 400px) {
-    body {
-        margin: 30px auto;
-        width: 80vw;
-        font-size: 5vmin;
-    }
-}
-
-input[type=range] {
+.slider {
     -webkit-appearance: none;
-    margin: 10px 0;
-    width: 100%;
-}
-
-input[type=range]:focus {
+    appearance: none;
+    width: 140px;
+    height: .75px;
+    background: white;
     outline: none;
+    -webkit-transition: .2s;
+    transition: .2s;
+    margin-top: 12px;
 }
 
-input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 10px;
-    cursor: pointer;
-    animate: 0.2s;
-    background: #ffffff;
-    border: 0px solid #000101;
+.slider:hover {
+    opacity: 1;
 }
 
-input[type=range]::-webkit-slider-thumb {
-    border: 0px solid #000000;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background: #ff7575;
-    cursor: pointer;
+.slider::-webkit-slider-thumb {
     -webkit-appearance: none;
-    margin-top: -5px;
-    margin-left: -2px;
+    appearance: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
 }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #ffffff;
+.slider::-moz-range-thumb {
+    width: 8px;
+    height: 8px;
+    background: white;
+    cursor: pointer;
 }
 
-.options {
+.font-text {
+    margin-top: 15px;
+    line-height: 28px;
+}
+
+p.test {
+    font-feature-settings: "case" 1;
+    /* figures old-style tabular lining proportional */
+}
+
+#henmania-input {
+    font-family: Henmania-Black;
+}
+
+.bea {
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(9, 30.5px);
+    grid-template-rows: repeat(13, 28px);
+    align-items: center;
+    letter-spacing: 1.5px;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.bea>* {
+    line-height: 28px;
+    letter-spacing: 1.5px;
+}
+
+.bea .top-row {
+    grid-row: 1;
+    grid-column: 1 / 10;
+    display: flex;
+    justify-content: space-between;
+}
+.bea .bottom-row {
+    grid-row: 13;
+    grid-column: 1 / 10;
+}
+
+.bea .left-rows {
+    grid-column: 1 / 1;
+    grid-row: 3 / 12;
+    display: flex;
+    flex-direction: column;
+}
+.bea .right-rows {
+    grid-column: 9;
+    grid-row: 3 / 12;
+}
+
+.bea-photo {
+    height: 300px;
+    grid-row: 2 / 13;
+    grid-column: 2 / 12;
+    margin-left: 8px;
+    margin-top: 8px;
+}
+
+.bea-info {
+    text-align: left;
+    padding: 0 40px;
+    font-size: 22px;
+}
+
+.tumblr {
+    margin: 30px 0;
     display: flex;
 }
