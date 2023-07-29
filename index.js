@@ -12,14 +12,23 @@ const sunEl = document.getElementById('sun');
 const moonEl = document.getElementById('moon');
 const bodyEl = document.getElementById('body');
 const dropdown3 = document.getElementById('dropdown-content-3');
+const dropdown4 = document.getElementById('dropdown-content-4');
 let cakeFeatures = [true, false, false, false, false, false];
 let cakeFeaturesCSS = ['none', 'lnum', 'onum', 'pnum', 'tnum', 'case'];
-const noneCheckEl = document.getElementById('none');
-const lnumCheckEl = document.getElementById('lining-figures');
-const onumCheckEl = document.getElementById('oldstyle-figures');
-const pnumCheckEl = document.getElementById('proportional-figures');
-const tnumCheckEl = document.getElementById('tabular-figures');
-const caseCheckEl = document.getElementById('case-sensitive');
+let henmaniaFeatures = [true, false, false, false, false, false];
+let henmaniaFeaturesCSS = ['none', 'onum', 'liga', 'ss01', 'ss02', 'ss03'];
+const c4fnoneCheckEl = document.getElementById('c4f-none');
+const c4flnumCheckEl = document.getElementById('c4f-lining-figures');
+const c4fonumCheckEl = document.getElementById('c4f-oldstyle-figures');
+const c4fpnumCheckEl = document.getElementById('c4f-proportional-figures');
+const c4ftnumCheckEl = document.getElementById('c4f-tabular-figures');
+const c4fcaseCheckEl = document.getElementById('c4f-case-sensitive');
+const henNoneCheckEl = document.getElementById('hen-none')
+const henOnumCheckEl = document.getElementById('hen-oldstyle-figures')
+const henLigaCheckEl = document.getElementById('hen-liga-figures')
+const henss01CheckEl = document.getElementById('hen-ss01-figures')
+const henss02CheckEl = document.getElementById('hen-ss02-figures')
+const henss03CheckEl = document.getElementById('hen-ss03-figures')
 
 slider1.addEventListener('input', function () {
   cake4freaksElement.style.fontSize = this.value + 'px';
@@ -59,69 +68,69 @@ dropdown3.addEventListener('click', function (evt) {
   if (evt.target.tagName === 'P') {
     if (evt.target.innerHTML === 'NONE') {
       cakeFeatures = [true, false, false, false, false, false];
-      noneCheckEl.style.visibility = 'visible'
-      lnumCheckEl.style.visibility = 'hidden'
-      onumCheckEl.style.visibility = 'hidden'
-      pnumCheckEl.style.visibility = 'hidden'
-      tnumCheckEl.style.visibility = 'hidden'
-      caseCheckEl.style.visibility = 'hidden'
+      c4fnoneCheckEl.style.visibility = 'visible'
+      c4flnumCheckEl.style.visibility = 'hidden'
+      c4fonumCheckEl.style.visibility = 'hidden'
+      c4fpnumCheckEl.style.visibility = 'hidden'
+      c4ftnumCheckEl.style.visibility = 'hidden'
+      c4fcaseCheckEl.style.visibility = 'hidden'
     } else if (evt.target.innerHTML === 'LINING FIGURES') {
       if (cakeFeatures[1] === true) {
         cakeFeatures[1] = false;
-        lnumCheckEl.style.visibility = 'hidden'
+        c4flnumCheckEl.style.visibility = 'hidden'
       } else {
         cakeFeatures[0] = false;
-        noneCheckEl.style.visibility = 'hidden'
+        c4fnoneCheckEl.style.visibility = 'hidden'
         cakeFeatures[1] = true;
-        lnumCheckEl.style.visibility = 'visible'
+        c4flnumCheckEl.style.visibility = 'visible'
         cakeFeatures[2] = false;
-        onumCheckEl.style.visibility = 'hidden'
+        c4fonumCheckEl.style.visibility = 'hidden'
       }
     } else if (evt.target.innerHTML === 'OLDSTYLE FIGURES') {
       if (cakeFeatures[2] === true) {
         cakeFeatures[2] = false;
-        onumCheckEl.style.visibility = 'hidden'
+        c4fonumCheckEl.style.visibility = 'hidden'
       } else {
         cakeFeatures[0] = false;
-        noneCheckEl.style.visibility = 'hidden'
+        c4fnoneCheckEl.style.visibility = 'hidden'
         cakeFeatures[2] = true;
-        onumCheckEl.style.visibility = 'visible'
+        c4fonumCheckEl.style.visibility = 'visible'
         cakeFeatures[1] = false;
-        lnumCheckEl.style.visibility = 'hidden'
+        c4flnumCheckEl.style.visibility = 'hidden'
       }
     } else if (evt.target.innerHTML === 'PROPORTIONAL FIGURES') {
       if (cakeFeatures[3] === true) {
         cakeFeatures[3] = false;
-        pnumCheckEl.style.visibility = 'hidden'
+        c4fpnumCheckEl.style.visibility = 'hidden'
       } else {
         cakeFeatures[0] = false;
-        noneCheckEl.style.visibility = 'hidden'
+        c4fnoneCheckEl.style.visibility = 'hidden'
         cakeFeatures[3] = true;
-        pnumCheckEl.style.visibility = 'visible'
+        c4fpnumCheckEl.style.visibility = 'visible'
         cakeFeatures[4] = false;
-        tnumCheckEl.style.visibility = 'hidden'
+        c4ftnumCheckEl.style.visibility = 'hidden'
       }
     } else if (evt.target.innerHTML === 'TABULAR FIGURES') {
       if (cakeFeatures[4] === true) {
         cakeFeatures[4] = false;
-        tnumCheckEl.style.visibility = 'hidden'
+        c4ftnumCheckEl.style.visibility = 'hidden'
       } else {
         cakeFeatures[0] = false;
-        noneCheckEl.style.visibility = 'hidden'
+        c4fnoneCheckEl.style.visibility = 'hidden'
         cakeFeatures[4] = true;
-        tnumCheckEl.style.visibility = 'visible'
+        c4ftnumCheckEl.style.visibility = 'visible'
         cakeFeatures[3] = false;
-        pnumCheckEl.style.visibility = 'hidden'
+        c4fpnumCheckEl.style.visibility = 'hidden'
       }
     } else if (evt.target.innerHTML === 'CASE SENSITIVE') {
       if (cakeFeatures[5] === true) {
         cakeFeatures[5] = false;
-        caseCheckEl.style.visibility = 'hidden'
+        c4fcaseCheckEl.style.visibility = 'hidden'
       } else {
         cakeFeatures[0] = false;
-        noneCheckEl.style.visibility = 'hidden'
+        c4fnoneCheckEl.style.visibility = 'hidden'
         cakeFeatures[5] = true;
-        caseCheckEl.style.visibility = 'visible'
+        c4fcaseCheckEl.style.visibility = 'visible'
       }
     }
     let currFeatures = [];
@@ -134,8 +143,90 @@ dropdown3.addEventListener('click', function (evt) {
         }
       }
     })
-    console.log(currFeatures)
     cake4freaksElement.style.fontFeatureSettings = `"${currFeatures.join('", "')}"`;
+    if (currFeatures.length === 0) {
+      c4fnoneCheckEl.style.visibility = 'visible'
+    }
+  } else {
+    return;
+  }
+});
+
+dropdown4.addEventListener('click', function (evt) {
+  if (evt.target.tagName === 'P') {
+    if (evt.target.innerHTML === 'NONE') {
+      henmaniaFeatures = [true, false, false, false, false, false];
+      henNoneCheckEl.style.visibility = 'visible'
+      henOnumCheckEl.style.visibility = 'hidden'
+      henLigaCheckEl.style.visibility = 'hidden'
+      henss01CheckEl.style.visibility = 'hidden'
+      henss02CheckEl.style.visibility = 'hidden'
+      henss03CheckEl.style.visibility = 'hidden'
+    } else if (evt.target.innerHTML === 'OLDSTYLE FIGURES') {
+      if (henmaniaFeatures[1] === true) {
+        henmaniaFeatures[1] = false;
+        henOnumCheckEl.style.visibility = 'hidden'
+      } else {
+        henmaniaFeatures[0] = false;
+        henNoneCheckEl.style.visibility = 'hidden'
+        henmaniaFeatures[1] = true;
+        henOnumCheckEl.style.visibility = 'visible'
+      }
+    } else if (evt.target.innerHTML === 'LIGATURES') {
+      if (henmaniaFeatures[2] === true) {
+        henmaniaFeatures[2] = false;
+        henLigaCheckEl.style.visibility = 'hidden'
+      } else {
+        henmaniaFeatures[0] = false;
+        henNoneCheckEl.style.visibility = 'hidden'
+        henmaniaFeatures[2] = true;
+        henLigaCheckEl.style.visibility = 'visible'
+      }
+    } else if (evt.target.innerHTML === 'alt g') {
+      if (henmaniaFeatures[3] === true) {
+        henmaniaFeatures[3] = false;
+        henss01CheckEl.style.visibility = 'hidden'
+      } else {
+        henmaniaFeatures[0] = false;
+        henNoneCheckEl.style.visibility = 'hidden'
+        henmaniaFeatures[3] = true;
+        henss01CheckEl.style.visibility = 'visible'
+      }
+    } else if (evt.target.innerHTML === 'alt uvwy') {
+      if (henmaniaFeatures[4] === true) {
+        henmaniaFeatures[4] = false;
+        henss02CheckEl.style.visibility = 'hidden'
+      } else {
+        henmaniaFeatures[0] = false;
+        henNoneCheckEl.style.visibility = 'hidden'
+        henmaniaFeatures[4] = true;
+        henss02CheckEl.style.visibility = 'visible'
+      }
+    } else if (evt.target.innerHTML === 'alt e') {
+      if (henmaniaFeatures[5] === true) {
+        henmaniaFeatures[5] = false;
+        henss03CheckEl.style.visibility = 'hidden'
+      } else {
+        henmaniaFeatures[0] = false;
+        henNoneCheckEl.style.visibility = 'hidden'
+        henmaniaFeatures[5] = true;
+        henss03CheckEl.style.visibility = 'visible'
+      }
+    }
+    let currFeatures = [];
+    henmaniaFeatures.forEach((feature, idx) => {
+      if (feature === true) {
+        if (currFeatures.includes(feature)) {
+          return
+        } else {
+          currFeatures.push(henmaniaFeaturesCSS[idx])
+        }
+      }
+    })
+    henmaniaElement.style.fontFeatureSettings = `"${currFeatures.join('", "')}"`;
+    if (currFeatures.length === 0) {
+      henNoneCheckEl.style.visibility = 'visible'
+    }
   } else {
     return;
   }

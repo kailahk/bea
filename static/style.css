@@ -156,7 +156,7 @@ body {
 }
 
 .cake4freaks-section h3 {
-    font-feature-settings:"case";
+    font-feature-settings: "case";
 }
 
 .font-textarea-container {
@@ -314,7 +314,7 @@ a:hover {
     display: flex;
 }
 
-.tumblr > a {
+.tumblr>a {
     margin-left: 5px;
 }
 
@@ -340,25 +340,25 @@ a:hover {
     color: white;
     padding: 0 10px;
     display: block;
-    font-feature-settings:"case";
+    font-feature-settings: "case";
 }
 
-.dropdown-content > *:hover {
+.dropdown-content>*:hover {
     opacity: .7;
     cursor: pointer;
 }
 
-.dropdown-content > * {
+.dropdown-content>* {
     margin: 5px 0;
     font-size: 20px;
 }
 
-.cake4freaks-section > div > .dropdown-content {
+.cake4freaks-section>div>.dropdown-content {
     left: 275px;
     bottom: 8px;
 }
 
-.henmania-section > div > .dropdown-content {
+.henmania-section>div>.dropdown-content {
     left: 222px;
     bottom: 8px;
 }
@@ -369,7 +369,7 @@ a:hover {
     padding: 10px 10px 0 0;
 }
 
-#sun-and-moon > img {
+#sun-and-moon>img {
     height: 20px
 }
 
@@ -378,31 +378,22 @@ a:hover {
     font-size: 22px;
 }
 
-#none {
+#c4f-none,
+#hen-none {
     visibility: visible;
 }
-#lining-figures, #tabular-figures, #oldstyle-figures, #case-sensitive, #proportional-figures {
+
+#c4f-lining-figures,
+#c4f-tabular-figures,
+#c4f-oldstyle-figures,
+#c4f-case-sensitive,
+#c4f-proportional-figures,
+#hen-oldstyle-figures,
+#hen-liga-figures,
+#hen-ss01-figures,
+#hen-ss02-figures,
+#hen-ss03-figures {
     visibility: hidden;
-}
-
-p.test {
-    /* cake4freaks */
-    /* none */
-    /* lnum - lining figures */
-    /* onum - oldstyle figures */
-    /* pnum - proportional figures */
-    /* tnum - tabular figures */
-    /* case - case sensitive */
-    /* either onum or lnum // either pnum or tnum */
-
-    font-family: Henmania-Black;
-    font-feature-settings:"ss03";
-    /* henmania */
-    /* onum - oldstyle figures */
-    /* liga - ligatures */
-    /* ss01 - alt g */
-    /* ss02 - alt uvwy */
-    /* ss03 - alt e */
 }
 
 .features-option {
@@ -415,7 +406,7 @@ p.test {
     display: block !important;
 }
 
-.features-option > div.dropdown-content {
+.features-option>div.dropdown-content {
     left: 103px;
     top: 12.5px;
     min-width: 185px !important;
@@ -423,7 +414,7 @@ p.test {
     padding-top: 10px;
 }
 
-.features-option > div.dropdown-content > * {
+.features-option>div.dropdown-content>* {
     font-size: 10px;
     display: flex;
     justify-content: flex-start;
@@ -432,16 +423,21 @@ p.test {
     padding: 0 !important;
 }
 
-#dropdown-content-3 > div > p {
+#dropdown-content-3>div>p {
     display: flex;
 }
 
-#dropdown-content-3 > div > p:hover {
+#dropdown-content-3>div>p:hover {
     opacity: .7;
     cursor: pointer;
 }
 
-.features-option > div.dropdown-content > *:hover {
+#dropdown-content-4>div>p:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
+.features-option>div.dropdown-content>*:hover {
     opacity: 1;
-    cursor:auto;
+    cursor: auto;
 }
