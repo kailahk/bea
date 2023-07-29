@@ -183,19 +183,16 @@ textarea:focus {
     outline: 0;
 }
 
-.size-option>label {
+label {
     font-size: 16px;
     letter-spacing: 2px;
 }
 
-.leading-option>label {
-    font-size: 16px;
-    letter-spacing: 2px;
-}
 
 .options {
     margin-top: 10px;
     display: flex;
+    justify-content: space-between;
 }
 
 .options>* {
@@ -214,7 +211,7 @@ a:hover {
 }
 
 .size-option {
-    width: 260px;
+    width: 203px;
 }
 
 .slider {
@@ -227,10 +224,6 @@ a:hover {
     -webkit-transition: .2s;
     transition: .2s;
     margin-top: 12px;
-}
-
-.slider:hover {
-    opacity: 1;
 }
 
 .slider::-webkit-slider-thumb {
@@ -343,19 +336,19 @@ a:hover {
     z-index: 1;
 }
 
-.dropdown-content p {
+.dropdown-content * {
     color: white;
     padding: 0 10px;
     display: block;
     font-feature-settings:"case";
 }
 
-.dropdown-content p:hover {
+.dropdown-content > *:hover {
     opacity: .7;
     cursor: pointer;
 }
 
-.dropdown-content > p {
+.dropdown-content > * {
     margin: 5px 0;
     font-size: 20px;
 }
@@ -385,9 +378,13 @@ a:hover {
     font-size: 22px;
 }
 
-p.test, p.no-test {
-    font-family: Henmania-Black;
+#none {
+    visibility: visible;
 }
+#lining-figures, #tabular-figures, #oldstyle-figures, #case-sensitive, #proportional-figures {
+    visibility: hidden;
+}
+
 p.test {
     /* cake4freaks */
     /* none */
@@ -406,4 +403,45 @@ p.test {
     /* ss01 - alt g */
     /* ss02 - alt uvwy */
     /* ss03 - alt e */
+}
+
+.features-option {
+    position: relative;
+    display: inline-block;
+    bottom: 6px;
+}
+
+.features-option:hover .dropdown-content {
+    display: block !important;
+}
+
+.features-option > div.dropdown-content {
+    left: 103px;
+    top: 12.5px;
+    min-width: 185px !important;
+    height: 128px;
+    padding-top: 10px;
+}
+
+.features-option > div.dropdown-content > * {
+    font-size: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: -14px 0 !important;
+    padding: 0 !important;
+}
+
+#dropdown-content-3 > div > p {
+    display: flex;
+}
+
+#dropdown-content-3 > div > p:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
+.features-option > div.dropdown-content > *:hover {
+    opacity: 1;
+    cursor:auto;
 }
