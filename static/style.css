@@ -609,7 +609,7 @@ a:hover {
         border-style: none;
         color: white;
         font-size: 80px;
-        overflow: scroll;
+        text-align: left;
     }
 
     .font-textarea-container {
