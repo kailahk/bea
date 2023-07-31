@@ -337,7 +337,7 @@ a:hover {
 }
 
 .dropdown-content * {
-    color: white;
+    color: inherit;
     padding: 0 10px;
     display: block;
     font-feature-settings: "case";
@@ -392,7 +392,17 @@ a:hover {
 #hen-liga-figures,
 #hen-ss01-figures,
 #hen-ss02-figures,
-#hen-ss03-figures {
+#hen-ss03-figures,
+#c4f-lining-figures2,
+#c4f-tabular-figures2,
+#c4f-oldstyle-figures2,
+#c4f-case-sensitive2,
+#c4f-proportional-figures2,
+#hen-oldstyle-figures2,
+#hen-liga-figures2,
+#hen-ss01-figures2,
+#hen-ss02-figures2,
+#hen-ss03-figures2 {
     visibility: hidden;
 }
 
@@ -423,16 +433,11 @@ a:hover {
     padding: 0 !important;
 }
 
-#dropdown-content-3>div>p {
+#dropdown-content-3>div>p, #dropdown-content-6>div>p {
     display: flex;
 }
 
-#dropdown-content-3>div>p:hover {
-    opacity: .7;
-    cursor: pointer;
-}
-
-#dropdown-content-4>div>p:hover {
+#dropdown-content-3>div>p:hover, #dropdown-content-4>div>p:hover, #dropdown-content-5>div>p:hover, #dropdown-content-6>div>p:hover {
     opacity: .7;
     cursor: pointer;
 }
@@ -440,4 +445,8 @@ a:hover {
 .features-option>div.dropdown-content>*:hover {
     opacity: 1;
     cursor: auto;
+}
+
+#dropdown-content-5, #dropdown-content-6 {
+    visibility: hidden;
 }
