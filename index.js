@@ -84,8 +84,6 @@ dropdown1.addEventListener('click', function (evt) {
     c4fpnumCheckEl.style.visibility = 'hidden'
     c4ftnumCheckEl.style.visibility = 'hidden'
     c4fcaseCheckEl.style.visibility = 'hidden'
-    console.log(c4fnoneCheckEl.style.visibility)
-    console.log(henNoneCheckEl2.style.visibility)
   } else if (evt.target.innerHTML === "HENMANIA") {
     cakeFeatures = [true, false, false, false, false, false];
     henmaniaFeatures2 = [true, false, false, false, false, false];
@@ -105,8 +103,6 @@ dropdown1.addEventListener('click', function (evt) {
     c4fpnumCheckEl.style.visibility = 'hidden'
     c4ftnumCheckEl.style.visibility = 'hidden'
     c4fcaseCheckEl.style.visibility = 'hidden'
-    console.log(c4fnoneCheckEl.style.visibility)
-    console.log(henNoneCheckEl2.style.visibility)
   }
 });
 
@@ -130,8 +126,6 @@ dropdown2.addEventListener('click', function (evt) {
     c4fpnumCheckEl2.style.visibility = 'hidden'
     c4ftnumCheckEl2.style.visibility = 'hidden'
     c4fcaseCheckEl2.style.visibility = 'hidden'
-    console.log(c4fnoneCheckEl2.style.visibility)
-    console.log(henNoneCheckEl.style.visibility)
   } else if (evt.target.innerHTML === "HENMANIA") {
     henmaniaFeatures = [true, false, false, false, false, false];
     cakeFeatures2 = [true, false, false, false, false, false];
@@ -151,8 +145,6 @@ dropdown2.addEventListener('click', function (evt) {
     c4fpnumCheckEl2.style.visibility = 'hidden'
     c4ftnumCheckEl2.style.visibility = 'hidden'
     c4fcaseCheckEl2.style.visibility = 'hidden'
-    console.log(c4fnoneCheckEl2.style.visibility)
-    console.log(henNoneCheckEl.style.visibility)
   }
 });
 
@@ -166,8 +158,6 @@ dropdown3.addEventListener('click', function (evt) {
       c4fpnumCheckEl.style.visibility = 'hidden'
       c4ftnumCheckEl.style.visibility = 'hidden'
       c4fcaseCheckEl.style.visibility = 'hidden'
-      console.log(c4fnoneCheckEl.style.visibility)
-      console.log(henNoneCheckEl2.style.visibility)
     } else if (evt.target.innerHTML === 'LINING FIGURES') {
       if (cakeFeatures[1] === true) {
         cakeFeatures[1] = false;

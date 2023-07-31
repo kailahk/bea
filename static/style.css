@@ -21,7 +21,6 @@ body {
     color: white;
     background-color: black;
     font-size: 23px;
-    height: 1000px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -309,7 +308,7 @@ a:hover {
     line-height: 130%;
 }
 
-.tumblr {
+.tumblr-web {
     margin: 30px 0;
     display: flex;
 }
@@ -433,11 +432,15 @@ a:hover {
     padding: 0 !important;
 }
 
-#dropdown-content-3>div>p, #dropdown-content-6>div>p {
+#dropdown-content-3>div>p,
+#dropdown-content-6>div>p {
     display: flex;
 }
 
-#dropdown-content-3>div>p:hover, #dropdown-content-4>div>p:hover, #dropdown-content-5>div>p:hover, #dropdown-content-6>div>p:hover {
+#dropdown-content-3>div>p:hover,
+#dropdown-content-4>div>p:hover,
+#dropdown-content-5>div>p:hover,
+#dropdown-content-6>div>p:hover {
     opacity: .7;
     cursor: pointer;
 }
@@ -447,6 +450,271 @@ a:hover {
     cursor: auto;
 }
 
-#dropdown-content-5, #dropdown-content-6 {
+#dropdown-content-5,
+#dropdown-content-6 {
     visibility: hidden;
+}
+
+#top-rows-mobile,
+#left-rows-mobile,
+#right-rows-mobile,
+#bottom-rows-mobile,
+#top-row-mobile,
+#left-row-mobile,
+#right-row-mobile,
+#bottom-row-mobile {
+    display: none;
+}
+
+.tumblr-mobile {
+    display: none;
+}
+
+@media (max-width: 640px) {
+
+    .cake4freaks-section,
+    .henmania-section,
+    .bea-section {
+        width: 400px;
+        text-align: center;
+    }
+
+    #top-rows-mobile,
+    #left-rows-mobile,
+    #right-rows-mobile,
+    #bottom-rows-mobile,
+    #top-row-mobile,
+    #left-row-mobile,
+    #right-row-mobile,
+    #bottom-row-mobile {
+        display: grid;
+    }
+
+    #top-rows-web,
+    #left-rows-web,
+    #right-rows-web,
+    #bottom-rows-web,
+    #top-row-web,
+    #left-row-web,
+    #right-row-web,
+    #bottom-row-web {
+        display: none;
+    }
+
+    .heading {
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(9, 31.5px);
+        grid-template-rows: repeat(9, 30px);
+        justify-items: center;
+    }
+
+    .heading #top-rows-mobile {
+        grid-row: 1 / 4;
+        grid-column: 1 / 10;
+    }
+
+    .heading #left-rows-mobile {
+        grid-row: 4 / 7;
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .heading #right-rows-mobile {
+        grid-row: 4 / 7;
+        grid-column: 9;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .heading #bottom-rows-mobile {
+        grid-row: 7 / 10;
+        grid-column: 1 / 10;
+        margin-top: -5px;
+    }
+
+    .heading .heading-name {
+        grid-column: 2 / 9;
+        grid-row: 4 / 7;
+    }
+
+    .contact {
+        padding-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(9, 31.5px);
+        grid-template-rows: repeat(auto, 28px);
+        align-items: center;
+        letter-spacing: 1.5px;
+    }
+
+    .contact #top-row-mobile {
+        grid-row: 1;
+        grid-column: 1 / 10;
+        display: flex;
+    }
+
+    .contact #left-row-mobile {
+        grid-row: 2 / 10;
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact #right-row-mobile {
+        grid-row: 2 / 10;
+        grid-column: 9;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact #bottom-row-mobile {
+        grid-row: 10;
+        grid-column: 1 / 10;
+        display: flex;
+    }
+
+    .contact-info {
+        grid-column: 2 / 9;
+        grid-row: 2 / 11;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        word-wrap: break-word;
+        font-size: 20px;
+        text-align: center;
+        line-height: 24px;
+    }
+
+    .contact-info>a {
+        width: 137px;
+        margin: 0 auto;
+    }
+
+    #sun-and-moon {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 660px;
+    }
+
+    #sun-and-moon>img {
+        height: 20px
+    }
+
+    textarea {
+        min-width: 275px;
+        width: 275px;
+        background-color: black;
+        border-style: none;
+        color: white;
+        font-size: 80px;
+        overflow: scroll;
+    }
+
+    .font-textarea-container {
+        width: 280px;
+        margin: 0 auto;
+    }
+
+    .options {
+        flex-direction: column;
+        width: 275px;
+        margin: 5px auto;
+    }
+
+    .options>* {
+        display: flex;
+    }
+
+    .size-option,
+    .leading-option {
+        width: 100%;
+    }
+
+    .features-option {
+        margin-top: 5px;
+    }
+
+    .features-option>div.dropdown-content {
+        top: 5px;
+        left: 133px
+    }
+
+    .cake4freaks-section>div>div.dropdown-content>p,
+    .henmania-section>div>div.dropdown-content>p {
+        font-size: 14px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .cake4freaks-section>div>div.dropdown-content,
+    .henmania-section>div>div.dropdown-content {
+        min-width: 110px;
+        bottom: 35px;
+        left: 152px;
+    }
+
+    .henmania-section>div>div.dropdown-content {
+        left: 125px;
+    }
+
+    .bea-section {
+        width: 365px;
+    }
+
+    .tumblr-web,
+    .bottom-heart {
+        display: none;
+    }
+
+    .tumblr-mobile {
+        display: grid;
+        grid-template-columns: repeat(9, 31.5px);
+        grid-template-rows: repeat(6, 30px);
+        margin-left: 35px;
+        margin-top: 20px;
+        justify-items: center;
+    }
+
+    .tumblr-mobile > * {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .tumblr-mobile>.top-row {
+        grid-row: 1;
+        grid-column: 1 / 10;
+        letter-spacing: 1.5px;
+    }
+
+    .tumblr-mobile>.left-row {
+        grid-row: 2 / 4;
+        grid-column: 1;
+        line-height: 132%;
+    }
+
+    .tumblr-mobile>.right-row {
+        grid-row: 2 / 4;
+        grid-column: 9;
+        line-height: 132%;
+    }
+
+    .tumblr-mobile>.bottom-row {
+        grid-row: 4 / 7;
+        grid-column: 1 / 10;
+        flex-direction: column;
+    }
+
+    .tumblr-mobile > .bottom-row > * {
+        letter-spacing: 1.5px;
+    }
+
+    .tumblr-mobile>a {
+        grid-row: 2 / 4;
+        grid-column: 2 / 9;
+        margin-top: 15px;
+    }
+
 }
