@@ -76,7 +76,7 @@ body {
 }
 
 .contact {
-    padding-top: 80px;
+    padding-top: 60px;
     display: grid;
     grid-template-columns: repeat(23, 31.5px);
     grid-template-rows: repeat(7, 28px);
@@ -138,13 +138,16 @@ body {
 .bea-section {
     width: 724.5px;
     text-align: left;
-    padding-top: 80px;
+    padding-top: 60px;
+}
+.henmania-section {
+    padding-top: 40px;
 }
 
 .bea-section {
     text-align: center;
-    padding-bottom: 80px;
-    padding-top: 60px;
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 
 .cake4freaks-section h3,
