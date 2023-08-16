@@ -555,17 +555,17 @@ moonEl.addEventListener('click', function () {
   font1.style.border = '1px solid white';
   font2.style.border = '1px solid white';
   dropdown1.style.backgroundColor = 'black';
-  dropdown1.style.border = '1px solid black';
+  dropdown1.style.border = '1px solid white';
   dropdown2.style.backgroundColor = 'black';
-  dropdown2.style.border = '1px solid black';
+  dropdown2.style.border = '1px solid white';
   dropdown3.style.backgroundColor = 'black';
-  dropdown3.style.border = '1px solid black';
+  dropdown3.style.border = '1px solid white';
   dropdown4.style.backgroundColor = 'black';
-  dropdown4.style.border = '1px solid black';
+  dropdown4.style.border = '1px solid white';
   dropdown5.style.backgroundColor = 'black';
-  dropdown5.style.border = '1px solid black';
+  dropdown5.style.border = '1px solid white';
   dropdown6.style.backgroundColor = 'black';
-  dropdown6.style.border = '1px solid black';
+  dropdown6.style.border = '1px solid white';
   [...dropdown1.children].forEach((child) => {
     child.style.color = "white"
   });
