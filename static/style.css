@@ -317,8 +317,8 @@ a:hover {
     display: flex;
 }
 
-.tumblr>a {
-    margin-left: 5px;
+.tumblr-web>a {
+    margin-left: 8px;
 }
 
 .dropdown {
