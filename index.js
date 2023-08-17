@@ -269,7 +269,7 @@ dropdown4.addEventListener('click', function (evt) {
         henmaniaFeatures[2] = true;
         henLigaCheckEl.style.visibility = 'visible'
       }
-    } else if (evt.target.innerHTML === 'alt g') {
+    } else if (evt.target.innerHTML === 'ALT g') {
       if (henmaniaFeatures[3] === true) {
         henmaniaFeatures[3] = false;
         henss01CheckEl.style.visibility = 'hidden'
@@ -279,7 +279,7 @@ dropdown4.addEventListener('click', function (evt) {
         henmaniaFeatures[3] = true;
         henss01CheckEl.style.visibility = 'visible'
       }
-    } else if (evt.target.innerHTML === 'alt uvwy') {
+    } else if (evt.target.innerHTML === 'ALT uvwy') {
       if (henmaniaFeatures[4] === true) {
         henmaniaFeatures[4] = false;
         henss02CheckEl.style.visibility = 'hidden'
@@ -289,7 +289,7 @@ dropdown4.addEventListener('click', function (evt) {
         henmaniaFeatures[4] = true;
         henss02CheckEl.style.visibility = 'visible'
       }
-    } else if (evt.target.innerHTML === 'alt e') {
+    } else if (evt.target.innerHTML === 'ALT e') {
       if (henmaniaFeatures[5] === true) {
         henmaniaFeatures[5] = false;
         henss03CheckEl.style.visibility = 'hidden'
@@ -443,7 +443,7 @@ dropdown6.addEventListener('click', function (evt) {
         henmaniaFeatures2[2] = true;
         henLigaCheckEl2.style.visibility = 'visible'
       }
-    } else if (evt.target.innerHTML === 'alt g') {
+    } else if (evt.target.innerHTML === 'ALT g') {
       if (henmaniaFeatures2[3] === true) {
         henmaniaFeatures2[3] = false;
         henss01CheckEl2.style.visibility = 'hidden'
@@ -453,7 +453,7 @@ dropdown6.addEventListener('click', function (evt) {
         henmaniaFeatures2[3] = true;
         henss01CheckEl2.style.visibility = 'visible'
       }
-    } else if (evt.target.innerHTML === 'alt uvwy') {
+    } else if (evt.target.innerHTML === 'ALT uvwy') {
       if (henmaniaFeatures2[4] === true) {
         henmaniaFeatures2[4] = false;
         henss02CheckEl2.style.visibility = 'hidden'
@@ -463,7 +463,7 @@ dropdown6.addEventListener('click', function (evt) {
         henmaniaFeatures2[4] = true;
         henss02CheckEl2.style.visibility = 'visible'
       }
-    } else if (evt.target.innerHTML === 'alt e') {
+    } else if (evt.target.innerHTML === 'ALT e') {
       if (henmaniaFeatures2[5] === true) {
         henmaniaFeatures2[5] = false;
         henss03CheckEl2.style.visibility = 'hidden'
@@ -495,6 +495,19 @@ dropdown6.addEventListener('click', function (evt) {
     return;
   }
 });
+// const currSun = sunEl.getAttribute('src');
+
+// sunEl.addEventListener('mouseover', function() {
+//   if (currSun === 'https://i.imgur.com/hiCtBB5.png') {
+//     sunEl.setAttribute('src', 'https://i.imgur.com/HJPnKDH.png');
+//   } else if (currSun === 'https://i.imgur.com/HJPnKDH.png') {
+//     sunEl.setAttribute('src', 'https://i.imgur.com/hiCtBB5.png');
+//   }
+// })
+
+// sunEl.addEventListener('mouseleave', function() {
+//   sunEl.setAttribute('src', 'https://i.imgur.com/hiCtBB5.png');
+// })
 
 sunEl.addEventListener('click', function () {
   sunEl.setAttribute('src', 'https://i.imgur.com/Y9d7Vav.png')

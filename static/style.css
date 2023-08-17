@@ -29,7 +29,7 @@ body {
 }
 
 .heading {
-    padding-top: 60px;
+    padding-top: 80px;
     display: grid;
     grid-template-columns: repeat(23, 31.5px);
     grid-template-rows: auto;
@@ -147,7 +147,7 @@ body {
 .bea-section {
     text-align: center;
     padding-bottom: 40px;
-    padding-top: 40px;
+    padding-top: 25px;
 }
 
 .cake4freaks-section h3,
@@ -164,21 +164,21 @@ body {
 .font-textarea-container {
     border: 1px solid white;
     background-color: inherit;
-    overflow-x: scroll;
-    padding-left: 15px;
+    padding-left: 25px;
     display: flex;
     align-items: flex-start;
     margin-top: 8px;
+    padding-top: 8px;
+    min-height: 135px;
 }
 
 textarea {
-    min-width: 712px;
-    min-height: 135px;
-    height: 135px;
+    /* min-height and min-width don't allow text box to get smaller than its container */
+    height: 122px;
     background-color: black;
     border-style: none;
     color: white;
-    font-size: 80px;
+    font-size: 75px;
 }
 
 textarea:focus {
@@ -318,7 +318,7 @@ a:hover {
 }
 
 .tumblr-web>a {
-    margin-left: 8px;
+    margin-left: 7px;
 }
 
 .dropdown {
@@ -369,11 +369,13 @@ a:hover {
 #sun-and-moon {
     width: 100%;
     text-align: right;
-    padding: 10px 10px 0 0;
+    padding: 10px 8px 0 0;
+    position: fixed;
 }
 
 #sun-and-moon>img {
-    height: 20px
+    height: 20px;
+    cursor: pointer;
 }
 
 .type-design {
@@ -481,6 +483,9 @@ a:hover {
     .bea-section {
         width: 400px;
         text-align: center;
+    }
+    .cake4freaks-section {
+        margin-top: 25px;
     }
 
     #top-rows-mobile,
@@ -607,8 +612,8 @@ a:hover {
     }
 
     textarea {
-        min-width: 275px;
-        width: 275px;
+        /* min-width: 275px; */
+        /* width: 258px; */
         background-color: black;
         border-style: none;
         color: white;
@@ -719,6 +724,10 @@ a:hover {
         grid-row: 2 / 4;
         grid-column: 2 / 9;
         margin-top: 15px;
+    }
+
+    .bea-info p {
+        font-size: 18px;
     }
 
 }
