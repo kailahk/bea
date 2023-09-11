@@ -4,8 +4,10 @@ const slider3 = document.getElementById('slider-3');
 const slider4 = document.getElementById('slider-4');
 const font1 = document.getElementById('font-1');
 const font2 = document.getElementById('font-2');
-const cake4freaksElement = document.getElementById('cake4freaks-input');
-const henmaniaElement = document.getElementById('henmania-input');
+const cake4freaksElementWeb = document.getElementById('cake4freaks-input-web');
+const cake4freaksElementMobile = document.getElementById('cake4freaks-input-phone');
+const henmaniaElementWeb = document.getElementById('henmania-input-web');
+const henmaniaElementMobile = document.getElementById('henmania-input-phone');
 const dropdown1 = document.getElementById('dropdown-content-1');
 const dropdown2 = document.getElementById('dropdown-content-2');
 const sunEl = document.getElementById('sun');
@@ -45,31 +47,41 @@ const henLigaCheckEl2 = document.getElementById('hen-liga-figures2');
 const henss01CheckEl2 = document.getElementById('hen-ss01-figures2');
 const henss02CheckEl2 = document.getElementById('hen-ss02-figures2');
 const henss03CheckEl2 = document.getElementById('hen-ss03-figures2');
+const cake4freaksFont = new FontFace('cake4freaks', 'url(static/fonts/Cake4Freaks-Regular.woff)');
+const henmaniaFont = new FontFace('henmania', 'url(static/fonts/Henmania-Black.otf)');
 
 slider1.addEventListener('input', function () {
-  cake4freaksElement.style.fontSize = this.value + 'px';
-  cake4freaksElement.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider3.value) + 'px';
+  cake4freaksElementWeb.style.fontSize = this.value + 'px';
+  cake4freaksElementMobile.style.fontSize = this.value + 'px';
+  cake4freaksElementWeb.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider3.value) + 'px';
+  cake4freaksElementMobile.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider3.value) + 'px';
 });
 
 slider2.addEventListener('input', function () {
-  henmaniaElement.style.fontSize = this.value + 'px';
-  henmaniaElement.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider4.value) + 'px';
+  henmaniaElementWeb.style.fontSize = this.value + 'px';
+  henmaniaElementWeb.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider4.value) + 'px';
+  henmaniaElementMobile.style.fontSize = this.value + 'px';
+  henmaniaElementMobile.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider4.value) + 'px';
 });
 
 slider3.addEventListener('input', function () {
-  cake4freaksElement.style.lineHeight = parseInt(slider1.value) * 1.2 + parseInt(this.value) + 'px';
+  cake4freaksElementWeb.style.lineHeight = parseInt(slider1.value) * 1.2 + parseInt(this.value) + 'px';
+  cake4freaksElementMobile.style.lineHeight = parseInt(slider1.value) * 1.2 + parseInt(this.value) + 'px';
 });
 
 slider4.addEventListener('input', function () {
-  henmaniaElement.style.lineHeight = parseInt(slider2.value) * 1.2 + parseInt(this.value) + 'px';
+  henmaniaElementWeb.style.lineHeight = parseInt(slider2.value) * 1.2 + parseInt(this.value) + 'px';
+  henmaniaElementMobile.style.lineHeight = parseInt(slider2.value) * 1.2 + parseInt(this.value) + 'px';
 });
 
 dropdown1.addEventListener('click', function (evt) {
   if (evt.target.innerHTML === "CAKE4FREAKS") {
     cakeFeatures = [true, false, false, false, false, false];
     henmaniaFeatures2 = [true, false, false, false, false, false];
-    cake4freaksElement.style.fontFamily = "Cake4Freaks-Regular";
-    cake4freaksElement.style.fontFeatureSettings = "normal"
+    cake4freaksElementWeb.style.fontFamily = "Cake4Freaks-Regular";
+    cake4freaksElementMobile.style.fontFamily = "Cake4Freaks-Regular";
+    cake4freaksElementWeb.style.fontFeatureSettings = "normal"
+    cake4freaksElementMobile.style.fontFeatureSettings = "normal"
     dropdown3.style.visibility = "visible";
     dropdown6.style.visibility = "hidden";
     c4fnoneCheckEl.style.visibility = 'visible'
@@ -87,8 +99,10 @@ dropdown1.addEventListener('click', function (evt) {
   } else if (evt.target.innerHTML === "HENMANIA") {
     cakeFeatures = [true, false, false, false, false, false];
     henmaniaFeatures2 = [true, false, false, false, false, false];
-    cake4freaksElement.style.fontFamily = "Henmania-Black";
-    cake4freaksElement.style.fontFeatureSettings = "normal"
+    cake4freaksElementWeb.style.fontFamily = "Henmania-Black";
+    cake4freaksElementMobile.style.fontFamily = "Henmania-Black";
+    cake4freaksElementWeb.style.fontFeatureSettings = "normal"
+    cake4freaksElementMobile.style.fontFeatureSettings = "normal"
     dropdown3.style.visibility = "hidden";
     dropdown6.style.visibility = "visible";
     henNoneCheckEl2.style.visibility = 'visible'
@@ -110,8 +124,10 @@ dropdown2.addEventListener('click', function (evt) {
   if (evt.target.innerHTML === "CAKE4FREAKS") {
     cakeFeatures2 = [true, false, false, false, false, false];
     henmaniaFeatures = [true, false, false, false, false, false];
-    henmaniaElement.style.fontFamily = "Cake4Freaks-Regular";
-    henmaniaElement.style.fontFeatureSettings = "normal"
+    henmaniaElementWeb.style.fontFamily = "Cake4Freaks-Regular";
+    henmaniaElementWeb.style.fontFeatureSettings = "normal"
+    henmaniaElementMobile.style.fontFamily = "Cake4Freaks-Regular";
+    henmaniaElementMobile.style.fontFeatureSettings = "normal"
     dropdown4.style.visibility = "hidden";
     dropdown5.style.visibility = "visible";
     henNoneCheckEl.style.visibility = 'hidden'
@@ -129,8 +145,10 @@ dropdown2.addEventListener('click', function (evt) {
   } else if (evt.target.innerHTML === "HENMANIA") {
     henmaniaFeatures = [true, false, false, false, false, false];
     cakeFeatures2 = [true, false, false, false, false, false];
-    henmaniaElement.style.fontFamily = "Henmania-Black";
-    henmaniaElement.style.fontFeatureSettings = "normal";
+    henmaniaElementWeb.style.fontFamily = "Henmania-Black";
+    henmaniaElementWeb.style.fontFeatureSettings = "normal";
+    henmaniaElementMobile.style.fontFamily = "Henmania-Black";
+    henmaniaElementMobile.style.fontFeatureSettings = "normal";
     dropdown4.style.visibility = "visible";
     dropdown5.style.visibility = "hidden";
     henNoneCheckEl.style.visibility = 'visible'
@@ -227,10 +245,12 @@ dropdown3.addEventListener('click', function (evt) {
         }
       }
     })
-    cake4freaksElement.style.fontFeatureSettings = `"${currFeatures.join('", "')}"`;
+    cake4freaksElementWeb.style.fontFeatureSettings = `"${currFeatures.join('", "')}"`;
+    cake4freaksElementMobile.style.fontFeatureSettings = `"${currFeatures.join('", "')}"`;
     if (currFeatures.length === 0 || currFeatures[0] === 'normal') {
       c4fnoneCheckEl.style.visibility = 'visible'
-      cake4freaksElement.style.fontFeatureSettings = 'normal'
+      cake4freaksElementWeb.style.fontFeatureSettings = 'normal'
+      cake4freaksElementMobile.style.fontFeatureSettings = 'normal'
     } else {
       c4fnoneCheckEl.style.visibility = 'hidden'
     }
@@ -310,10 +330,12 @@ dropdown4.addEventListener('click', function (evt) {
         }
       }
     })
-    henmaniaElement.style.fontFeatureSettings = `"${currFeatures.join('", "')}"`;
+    henmaniaElementWeb.style.fontFeatureSettings = `"${currFeatures.join('", "')}"`;
+    henmaniaElementMobile.style.fontFeatureSettings = `"${currFeatures.join('", "')}"`;
     if (currFeatures.length === 0 || currFeatures[0] === 'normal') {
       henNoneCheckEl.style.visibility = 'visible'
-      henmaniaElement.style.fontFeatureSettings = 'normal'
+      henmaniaElementWeb.style.fontFeatureSettings = 'normal'
+      henmaniaElementMobile.style.fontFeatureSettings = 'normal'
     } else {
       henNoneCheckEl.style.visibility = 'hidden'
     }
@@ -401,10 +423,10 @@ dropdown5.addEventListener('click', function (evt) {
         }
       }
     })
-    henmaniaElement.style.fontFeatureSettings = `"${currFeatures.join('", "')}"`;
+    henmaniaElementWeb.style.fontFeatureSettings = `"${currFeatures.join('", "')}"`;
     if (currFeatures.length === 0 || currFeatures[0] === 'normal') {
       c4fnoneCheckEl2.style.visibility = 'visible'
-      henmaniaElement.style.fontFeatureSettings = 'normal'
+      henmaniaElementWeb.style.fontFeatureSettings = 'normal'
     } else {
       c4fnoneCheckEl2.style.visibility = 'hidden'
     }
@@ -484,10 +506,12 @@ dropdown6.addEventListener('click', function (evt) {
         }
       }
     })
-    cake4freaksElement.style.fontFeatureSettings = `"${currFeatures.join('", "')}"`;
+    cake4freaksElementWeb.style.fontFeatureSettings = `"${currFeatures.join('", "')}"`;
+    cake4freaksElementMobile.style.fontFeatureSettings = `"${currFeatures.join('", "')}"`;
     if (currFeatures.length === 0 || currFeatures[0] === 'normal') {
       henNoneCheckEl2.style.visibility = 'visible'
-      cake4freaksElement.style.fontFeatureSettings = 'normal'
+      cake4freaksElementWeb.style.fontFeatureSettings = 'normal'
+      cake4freaksElementMobile.style.fontFeatureSettings = 'normal'
     } else {
       c4fnoneCheckEl.style.visibility = 'hidden'
     }
@@ -495,29 +519,21 @@ dropdown6.addEventListener('click', function (evt) {
     return;
   }
 });
-// const currSun = sunEl.getAttribute('src');
 
-// sunEl.addEventListener('mouseover', function() {
-//   if (currSun === 'https://i.imgur.com/hiCtBB5.png') {
-//     sunEl.setAttribute('src', 'https://i.imgur.com/HJPnKDH.png');
-//   } else if (currSun === 'https://i.imgur.com/HJPnKDH.png') {
-//     sunEl.setAttribute('src', 'https://i.imgur.com/hiCtBB5.png');
-//   }
-// })
-
-// sunEl.addEventListener('mouseleave', function() {
-//   sunEl.setAttribute('src', 'https://i.imgur.com/hiCtBB5.png');
-// })
 
 sunEl.addEventListener('click', function () {
-  sunEl.setAttribute('src', 'https://i.imgur.com/Y9d7Vav.png')
-  moonEl.setAttribute('src', 'https://i.imgur.com/iOW2dL3.png')
+  sunEl.setAttribute('src', 'https://i.imgur.com/9Mittl6.png')
+  moonEl.setAttribute('src', 'https://i.imgur.com/qww9fRO.png')
   bodyEl.style.backgroundColor = 'white';
   bodyEl.style.color = 'black';
-  cake4freaksElement.style.backgroundColor = 'white';
-  cake4freaksElement.style.color = 'black';
-  henmaniaElement.style.backgroundColor = 'white';
-  henmaniaElement.style.color = 'black';
+  cake4freaksElementWeb.style.backgroundColor = 'white';
+  cake4freaksElementMobile.style.backgroundColor = 'white';
+  cake4freaksElementWeb.style.color = 'black';
+  cake4freaksElementMobile.style.color = 'black';
+  henmaniaElementWeb.style.backgroundColor = 'white';
+  henmaniaElementWeb.style.color = 'black';
+  henmaniaElementMobile.style.backgroundColor = 'white';
+  henmaniaElementMobile.style.color = 'black';
   font1.style.border = '1px solid black';
   font2.style.border = '1px solid black';
   dropdown1.style.backgroundColor = 'white';
@@ -561,10 +577,14 @@ moonEl.addEventListener('click', function () {
   moonEl.setAttribute('src', 'https://i.imgur.com/nVRAPPY.png')
   bodyEl.style.backgroundColor = 'black';
   bodyEl.style.color = 'white';
-  cake4freaksElement.style.backgroundColor = 'black';
-  cake4freaksElement.style.color = 'white';
-  henmaniaElement.style.backgroundColor = 'black';
-  henmaniaElement.style.color = 'white';
+  cake4freaksElementWeb.style.backgroundColor = 'black';
+  cake4freaksElementWeb.style.color = 'white';
+  cake4freaksElementMobile.style.backgroundColor = 'black';
+  cake4freaksElementMobile.style.color = 'white';
+  henmaniaElementWeb.style.backgroundColor = 'black';
+  henmaniaElementWeb.style.color = 'white';
+  henmaniaElementMobile.style.backgroundColor = 'black';
+  henmaniaElementMobile.style.color = 'white';
   font1.style.border = '1px solid white';
   font2.style.border = '1px solid white';
   dropdown1.style.backgroundColor = 'black';
