@@ -85,12 +85,10 @@ body {
     grid-template-columns: repeat(23, 31.5px);
     grid-template-rows: repeat(7, 28px);
     align-items: center;
-    letter-spacing: 1.5px;
 }
 
 .contact>* {
     line-height: 28px;
-    letter-spacing: 1.5px;
 }
 
 .contact .top-row {
@@ -129,10 +127,11 @@ body {
 
 .contact-info>p {
     margin: 0;
+    font-size: 20px;
 }
 
 .email {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .cake4freaks-section,
@@ -154,7 +153,7 @@ body {
 
 .cake4freaks-section h3,
 .henmania-section h3 {
-    font-size: 28px;
+    font-size: 23px;
     margin: 0;
     letter-spacing: 4px;
 }
@@ -170,21 +169,21 @@ body {
     display: flex;
     align-items: flex-start;
     margin-top: 8px;
-    padding-top: 8px;
-    min-height: 135px;
+    min-height: 105px;
 }
 #cake4freaks-input-phone, #henmania-input-phone {
     display: none;
 }
 textarea {
     /* min-height and min-width don't allow text box to get smaller than its container */
-    height: 122px;
-    min-height: 135px;
-    min-width: 698px;
+    height: 102px;
+    min-height: 100px;
+    min-width: 697px;
     background-color: black;
     border-style: none;
     color: white;
     font-size: 75px;
+    line-height: 120%;
 }
 
 textarea:focus {
@@ -490,7 +489,7 @@ a:hover {
     display: none;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 750px) {
 
     #cake4freaks-input-phone, #henmania-input-phone {
         display: flex;
@@ -590,7 +589,6 @@ a:hover {
         grid-template-columns: repeat(9, 31.5px);
         grid-template-rows: repeat(auto, 28px);
         align-items: center;
-        letter-spacing: 1.5px;
     }
 
     .contact #top-row-mobile {
@@ -633,6 +631,9 @@ a:hover {
         font-size: 20px;
         text-align: center;
         line-height: 24px;
+    }
+    .contact-info:first-child {
+        width: 100px;
     }
 
     .contact-info>a {
@@ -771,6 +772,7 @@ a:hover {
 
     .bea-info p {
         font-size: 18px;
+        line-height: 130%;
     }
     .bea {
         padding: 20px 0;
