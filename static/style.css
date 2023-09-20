@@ -646,6 +646,10 @@ a:hover {
         width: 100px;
     }
 
+    .contact-info > p {
+        padding: 0 10px;
+    }
+
     .contact-info>a {
         width: 137px;
         margin: 0 auto;
