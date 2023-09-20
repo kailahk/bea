@@ -182,7 +182,7 @@ textarea {
     /* min-height and min-width don't allow text box to get smaller than its container */
     height: 102px;
     min-height: 103px;
-    min-width: 698.5px;
+    min-width: 698px;
     background-color: black;
     border-style: none;
     color: white;
