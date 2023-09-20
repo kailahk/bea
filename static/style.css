@@ -499,7 +499,7 @@ a:hover {
 
     #cake4freaks-input-phone, #henmania-input-phone {
         display: flex;
-        min-width: 264px;
+        min-width: 262px;
         min-height: 108px;
     }
     #cake4freaks-input-web, #henmania-input-web {
@@ -550,7 +550,7 @@ a:hover {
     }
 
     .font-textarea-container {
-        padding-left: 15px;
+        padding-left: 5px;
     }
 
     .heading {
