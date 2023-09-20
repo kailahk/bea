@@ -501,6 +501,7 @@ a:hover {
         display: flex;
         min-width: 262px;
         min-height: 108px;
+        padding-left: 15px;
     }
     #cake4freaks-input-web, #henmania-input-web {
         display: none;
