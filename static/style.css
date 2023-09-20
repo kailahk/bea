@@ -85,12 +85,10 @@ body {
     grid-template-columns: repeat(23, 31.5px);
     grid-template-rows: repeat(7, 28px);
     align-items: center;
-    letter-spacing: 1.5px;
 }
 
 .contact>* {
     line-height: 28px;
-    letter-spacing: 1.5px;
 }
 
 .contact .top-row {
@@ -129,10 +127,15 @@ body {
 
 .contact-info>p {
     margin: 0;
+    font-size: 20px;
 }
 
 .email {
-    font-size: 20px;
+    font-size: 22px;
+}
+
+.email p {
+    margin-top: 20px;
 }
 
 .cake4freaks-section,
@@ -154,7 +157,7 @@ body {
 
 .cake4freaks-section h3,
 .henmania-section h3 {
-    font-size: 28px;
+    font-size: 23px;
     margin: 0;
     letter-spacing: 4px;
 }
@@ -170,21 +173,21 @@ body {
     display: flex;
     align-items: flex-start;
     margin-top: 8px;
-    padding-top: 8px;
-    min-height: 135px;
+    min-height: 105px;
 }
 #cake4freaks-input-phone, #henmania-input-phone {
     display: none;
 }
 textarea {
     /* min-height and min-width don't allow text box to get smaller than its container */
-    height: 122px;
-    min-height: 135px;
-    min-width: 698px;
+    height: 102px;
+    min-height: 103px;
+    min-width: 698.5px;
     background-color: black;
     border-style: none;
     color: white;
     font-size: 75px;
+    line-height: 120%;
 }
 
 textarea:focus {
@@ -333,6 +336,7 @@ a:hover {
 .dropdown {
     position: relative;
     display: inline-block;
+    cursor: pointer;
 }
 
 .dropdown:hover .dropdown-content {
@@ -366,12 +370,12 @@ a:hover {
 }
 
 .cake4freaks-section>div>.dropdown-content {
-    left: 275px;
+    left: 236px;
     bottom: 8px;
 }
 
 .henmania-section>div>.dropdown-content {
-    left: 222px;
+    left: 189px;
     bottom: 8px;
 }
 
@@ -425,6 +429,7 @@ a:hover {
     display: inline-block;
     bottom: 6px;
     padding-left: 50px;
+    cursor: pointer;
 }
 
 .features-option:hover .dropdown-content {
@@ -433,7 +438,7 @@ a:hover {
 
 .features-option>div.dropdown-content {
     left: 5px;
-    top: 38px;
+    top: 36px;
     min-width: 185px !important;
     height: 128px;
     padding-top: 10px;
@@ -490,11 +495,12 @@ a:hover {
     display: none;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 750px) {
 
     #cake4freaks-input-phone, #henmania-input-phone {
         display: flex;
-        min-width: 253px;
+        min-width: 264px;
+        min-height: 108px;
     }
     #cake4freaks-input-web, #henmania-input-web {
         display: none;
@@ -518,6 +524,7 @@ a:hover {
     }
     .bea-section {
         padding-top: 0px;
+        padding-bottom: 40px;
     }
 
     #top-rows-mobile,
@@ -590,13 +597,13 @@ a:hover {
         grid-template-columns: repeat(9, 31.5px);
         grid-template-rows: repeat(auto, 28px);
         align-items: center;
-        letter-spacing: 1.5px;
     }
 
     .contact #top-row-mobile {
         grid-row: 1;
         grid-column: 1 / 10;
         display: flex;
+        justify-content: space-between;
     }
 
     .contact #left-row-mobile {
@@ -614,13 +621,14 @@ a:hover {
     }
 
     .contact #right-row-mobile * {
-        margin-left: -9px;
+        margin-left: 2px;
     }
 
     .contact #bottom-row-mobile {
         grid-row: 10;
         grid-column: 1 / 10;
         display: flex;
+        justify-content: space-between;
     }
 
     .contact-info {
@@ -633,6 +641,9 @@ a:hover {
         font-size: 20px;
         text-align: center;
         line-height: 24px;
+    }
+    .contact-info:first-child {
+        width: 100px;
     }
 
     .contact-info>a {
@@ -677,7 +688,7 @@ a:hover {
     }
 
     .features-option {
-        margin-top: 5px;
+        margin-top: 7.5px;
         padding-left: 0px;
     }
 
@@ -697,12 +708,12 @@ a:hover {
     .cake4freaks-section>div>div.dropdown-content,
     .henmania-section>div>div.dropdown-content {
         min-width: 110px;
-        bottom: 35px;
+        bottom: 32px;
         left: 152px;
     }
 
     .henmania-section>div>div.dropdown-content {
-        left: 125px;
+        left: 64px;
     }
 
     .bea-section {
@@ -710,7 +721,11 @@ a:hover {
     }
 
     .henmania-section .dropdown h3 {
-        margin-left: -54px;
+        margin-left: -90px;
+    }
+
+    .cake4freaks-section .dropdown h3 {
+        margin-left: -45px;
     }
 
     .tumblr-web,
@@ -771,9 +786,12 @@ a:hover {
 
     .bea-info p {
         font-size: 18px;
+        line-height: 130%;
     }
     .bea {
         padding: 20px 0;
     }
-
+    .size-option, .leading-option {
+        width: 280px;
+    }
 }
