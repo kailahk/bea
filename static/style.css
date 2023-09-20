@@ -182,7 +182,7 @@ textarea {
     /* min-height and min-width don't allow text box to get smaller than its container */
     height: 102px;
     min-height: 103px;
-    min-width: 698.5px;
+    min-width: 698px;
     background-color: black;
     border-style: none;
     color: white;
@@ -501,6 +501,7 @@ a:hover {
         display: flex;
         min-width: 262px;
         min-height: 108px;
+        padding-left: 15px;
     }
     #cake4freaks-input-web, #henmania-input-web {
         display: none;
@@ -644,6 +645,10 @@ a:hover {
     }
     .contact-info:first-child {
         width: 100px;
+    }
+
+    .contact-info > p {
+        padding: 0 10px;
     }
 
     .contact-info>a {
