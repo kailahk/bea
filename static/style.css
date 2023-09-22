@@ -499,9 +499,9 @@ a:hover {
 
     #cake4freaks-input-phone, #henmania-input-phone {
         display: flex;
-        min-width: 262px;
-        min-height: 108px;
-        padding-left: 15px;
+        min-width: 272px;
+        min-height: 104px;
+        padding-left: 10px;
     }
     #cake4freaks-input-web, #henmania-input-web {
         display: none;
