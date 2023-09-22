@@ -500,7 +500,7 @@ a:hover {
     #cake4freaks-input-phone, #henmania-input-phone {
         display: flex;
         min-width: 270px;
-        min-height: 102px;
+        min-height: 100px;
         padding-left: 10px;
     }
     #cake4freaks-input-web, #henmania-input-web {
