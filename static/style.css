@@ -175,9 +175,11 @@ body {
     margin-top: 8px;
     min-height: 105px;
 }
+
 #cake4freaks-input-phone, #henmania-input-phone {
     display: none;
 }
+
 textarea {
     /* min-height and min-width don't allow text box to get smaller than its container */
     height: 102px;
@@ -502,8 +504,21 @@ a:hover {
         min-width: 271px;
         min-height: 103px;
         padding-left: 10px;
-        font-size: 75px
+        font-size: 75px;
+        background-color: black;
+        border-style: none;
+        color: white;
+        text-align: left;
+        width: 100%;
+        box-sizing: border-box;
     }
+
+    .font-textarea-container {
+        width: 280px;
+        margin: 0 auto;
+        padding-left: 5px;
+    }
+
     #cake4freaks-input-web, #henmania-input-web {
         display: none;
     }
@@ -549,10 +564,6 @@ a:hover {
     #right-row-web,
     #bottom-row-web {
         display: none;
-    }
-
-    .font-textarea-container {
-        padding-left: 5px;
     }
 
     .heading {
@@ -666,20 +677,6 @@ a:hover {
 
     #sun-and-moon>img {
         height: 20px
-    }
-
-    textarea {
-        /* min-width: 275px; */
-        /* width: 258px; */
-        background-color: black;
-        border-style: none;
-        color: white;
-        text-align: left;
-    }
-
-    .font-textarea-container {
-        width: 280px;
-        margin: 0 auto;
     }
 
     .options {

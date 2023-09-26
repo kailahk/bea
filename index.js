@@ -50,11 +50,23 @@ const henss03CheckEl2 = document.getElementById('hen-ss03-figures2');
 const cake4freaksFont = new FontFace('cake4freaks', 'url(static/fonts/Cake4Freaks-Regular.woff)');
 const henmaniaFont = new FontFace('henmania', 'url(static/fonts/Henmania-Black.otf)');
 
+function autoResize() {
+  cake4freaksElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
+  cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
+}
+
+function autoResizeHen() {
+  henmaniaElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
+  henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
+}
+
 slider1.addEventListener('input', function () {
   cake4freaksElementWeb.style.fontSize = this.value + 'px';
   cake4freaksElementMobile.style.fontSize = this.value + 'px';
   cake4freaksElementWeb.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider3.value) + 'px';
   cake4freaksElementMobile.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider3.value) + 'px';
+  cake4freaksElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
+  cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
 });
 
 slider2.addEventListener('input', function () {
@@ -62,16 +74,22 @@ slider2.addEventListener('input', function () {
   henmaniaElementWeb.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider4.value) + 'px';
   henmaniaElementMobile.style.fontSize = this.value + 'px';
   henmaniaElementMobile.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider4.value) + 'px';
+  henmaniaElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
+  henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
 });
 
 slider3.addEventListener('input', function () {
   cake4freaksElementWeb.style.lineHeight = parseInt(slider1.value) * 1.2 + parseInt(this.value) + 'px';
   cake4freaksElementMobile.style.lineHeight = parseInt(slider1.value) * 1.2 + parseInt(this.value) + 'px';
+  cake4freaksElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
+  cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
 });
 
 slider4.addEventListener('input', function () {
   henmaniaElementWeb.style.lineHeight = parseInt(slider2.value) * 1.2 + parseInt(this.value) + 'px';
   henmaniaElementMobile.style.lineHeight = parseInt(slider2.value) * 1.2 + parseInt(this.value) + 'px';
+  henmaniaElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
+  henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
 });
 
 dropdown1.addEventListener('click', function (evt) {
