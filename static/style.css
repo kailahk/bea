@@ -190,6 +190,8 @@ textarea {
     color: white;
     font-size: 75px;
     line-height: 120%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 textarea:focus {
