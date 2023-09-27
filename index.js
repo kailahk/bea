@@ -60,11 +60,23 @@ function autoResizeHen() {
   henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
 }
 
+function autoResizeCakeWeb() {
+  cake4freaksElementWeb.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
+  cake4freaksElementWeb.style.height = cake4freaksElementWeb.scrollHeight + 'px'; // Set the height to match the scrollHeight
+}
+
+function autoResizeHenWeb() {
+  henmaniaElementWeb.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
+  henmaniaElementWeb.style.height = henmaniaElementWeb.scrollHeight + 'px'; // Set the height to match the scrollHeight
+}
+
 slider1.addEventListener('input', function () {
   cake4freaksElementWeb.style.fontSize = this.value + 'px';
   cake4freaksElementMobile.style.fontSize = this.value + 'px';
   cake4freaksElementWeb.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider3.value) + 'px';
   cake4freaksElementMobile.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider3.value) + 'px';
+  cake4freaksElementWeb.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
+  cake4freaksElementWeb.style.height = cake4freaksElementWeb.scrollHeight + 'px'; // Set the height to match the scrollHeight
   cake4freaksElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
   cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
 });
@@ -76,6 +88,8 @@ slider2.addEventListener('input', function () {
   henmaniaElementMobile.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider4.value) + 'px';
   henmaniaElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
   henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  henmaniaElementWeb.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
+  henmaniaElementWeb.style.height = henmaniaElementWeb.scrollHeight + 'px'; // Set the height to match the scrollHeight
 });
 
 slider3.addEventListener('input', function () {
@@ -83,6 +97,8 @@ slider3.addEventListener('input', function () {
   cake4freaksElementMobile.style.lineHeight = parseInt(slider1.value) * 1.2 + parseInt(this.value) + 'px';
   cake4freaksElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
   cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  cake4freaksElementWeb.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
+  cake4freaksElementWeb.style.height = cake4freaksElementWeb.scrollHeight + 'px'; // Set the height to match the scrollHeight
 });
 
 slider4.addEventListener('input', function () {
@@ -90,6 +106,8 @@ slider4.addEventListener('input', function () {
   henmaniaElementMobile.style.lineHeight = parseInt(slider2.value) * 1.2 + parseInt(this.value) + 'px';
   henmaniaElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
   henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  henmaniaElementWeb.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
+  henmaniaElementWeb.style.height = henmaniaElementWeb.scrollHeight + 'px'; // Set the height to match the scrollHeight
 });
 
 dropdown1.addEventListener('click', function (evt) {
