@@ -49,25 +49,54 @@ const henss02CheckEl2 = document.getElementById('hen-ss02-figures2');
 const henss03CheckEl2 = document.getElementById('hen-ss03-figures2');
 const cake4freaksFont = new FontFace('cake4freaks', 'url(static/fonts/Cake4Freaks-Regular.woff)');
 const henmaniaFont = new FontFace('henmania', 'url(static/fonts/Henmania-Black.otf)');
+const featuresOptionc4f = document.getElementById('cake-features');
+const featuresOptionHen = document.getElementById('hen-features');
+
+window.addEventListener('resize', featuresHeight);
+window.addEventListener('resize', featuresHeightHen);
+window.addEventListener('resize', autoResize);
+window.addEventListener('resize', autoResizeHen);
+window.addEventListener('resize', autoResizeCakeWeb);
+window.addEventListener('resize', autoResizeHenWeb);
 
 function autoResize() {
-  cake4freaksElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  cake4freaksElementMobile.style.height = '103px';
+  cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px';
+  featuresHeight();
 }
 
 function autoResizeHen() {
-  henmaniaElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  henmaniaElementMobile.style.height = '103px';
+  henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px';
+  featuresHeightHen();
 }
 
 function autoResizeCakeWeb() {
-  cake4freaksElementWeb.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  cake4freaksElementWeb.style.height = cake4freaksElementWeb.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  cake4freaksElementWeb.style.height = '103px';
+  cake4freaksElementWeb.style.height = cake4freaksElementWeb.scrollHeight + 'px';
 }
 
 function autoResizeHenWeb() {
-  henmaniaElementWeb.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  henmaniaElementWeb.style.height = henmaniaElementWeb.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  henmaniaElementWeb.style.height = '103px';
+  henmaniaElementWeb.style.height = henmaniaElementWeb.scrollHeight + 'px';
+}
+
+function featuresHeight() {
+  if (window.innerWidth <= 750) {
+    featuresOptionc4f.style.top = '210px';
+    featuresOptionc4f.style.top = cake4freaksElementMobile.scrollHeight + 77 + 'px';
+  } else {
+    featuresOptionc4f.style.top = '0px'; 
+  }
+}
+
+function featuresHeightHen() {
+  if (window.innerWidth <= 750) {
+    featuresOptionHen.style.top = '210px';
+    featuresOptionHen.style.top = henmaniaElementMobile.scrollHeight + 77 + 'px';
+  } else {
+    featuresOptionHen.style.top = '0px'; 
+  }
 }
 
 slider1.addEventListener('input', function () {
@@ -75,10 +104,11 @@ slider1.addEventListener('input', function () {
   cake4freaksElementMobile.style.fontSize = this.value + 'px';
   cake4freaksElementWeb.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider3.value) + 'px';
   cake4freaksElementMobile.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider3.value) + 'px';
-  cake4freaksElementWeb.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  cake4freaksElementWeb.style.height = cake4freaksElementWeb.scrollHeight + 'px'; // Set the height to match the scrollHeight
-  cake4freaksElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  cake4freaksElementWeb.style.height = '103px';
+  cake4freaksElementWeb.style.height = cake4freaksElementWeb.scrollHeight + 'px';
+  cake4freaksElementMobile.style.height = '103px';
+  cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px';
+  featuresHeight();
 });
 
 slider2.addEventListener('input', function () {
@@ -86,28 +116,31 @@ slider2.addEventListener('input', function () {
   henmaniaElementWeb.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider4.value) + 'px';
   henmaniaElementMobile.style.fontSize = this.value + 'px';
   henmaniaElementMobile.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider4.value) + 'px';
-  henmaniaElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
-  henmaniaElementWeb.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  henmaniaElementWeb.style.height = henmaniaElementWeb.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  henmaniaElementMobile.style.height = '103px';
+  henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px';
+  henmaniaElementWeb.style.height = '103px';
+  henmaniaElementWeb.style.height = henmaniaElementWeb.scrollHeight + 'px';
+  featuresHeightHen();
 });
 
 slider3.addEventListener('input', function () {
   cake4freaksElementWeb.style.lineHeight = parseInt(slider1.value) * 1.2 + parseInt(this.value) + 'px';
   cake4freaksElementMobile.style.lineHeight = parseInt(slider1.value) * 1.2 + parseInt(this.value) + 'px';
-  cake4freaksElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
-  cake4freaksElementWeb.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  cake4freaksElementWeb.style.height = cake4freaksElementWeb.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  cake4freaksElementMobile.style.height = '103px';
+  cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px';
+  cake4freaksElementWeb.style.height = '103px';
+  cake4freaksElementWeb.style.height = cake4freaksElementWeb.scrollHeight + 'px';
+  featuresHeight();
 });
 
 slider4.addEventListener('input', function () {
   henmaniaElementWeb.style.lineHeight = parseInt(slider2.value) * 1.2 + parseInt(this.value) + 'px';
   henmaniaElementMobile.style.lineHeight = parseInt(slider2.value) * 1.2 + parseInt(this.value) + 'px';
-  henmaniaElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
-  henmaniaElementWeb.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  henmaniaElementWeb.style.height = henmaniaElementWeb.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  henmaniaElementMobile.style.height = '103px';
+  henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px';
+  henmaniaElementWeb.style.height = '103px';
+  henmaniaElementWeb.style.height = henmaniaElementWeb.scrollHeight + 'px';
+  featuresHeightHen();
 });
 
 dropdown1.addEventListener('click', function (evt) {
@@ -293,6 +326,11 @@ dropdown3.addEventListener('click', function (evt) {
   } else {
     return;
   }
+  cake4freaksElementMobile.style.height = '103px';
+  cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px';
+  cake4freaksElementWeb.style.height = '103px';
+  cake4freaksElementWeb.style.height = cake4freaksElementWeb.scrollHeight + 'px';
+  featuresHeight();
 });
 
 dropdown4.addEventListener('click', function (evt) {
@@ -378,6 +416,11 @@ dropdown4.addEventListener('click', function (evt) {
   } else {
     return;
   }
+  henmaniaElementMobile.style.height = '103px';
+  henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px';
+  henmaniaElementWeb.style.height = '103px';
+  henmaniaElementWeb.style.height = henmaniaElementWeb.scrollHeight + 'px';
+  featuresHeightHen();
 });
 
 dropdown5.addEventListener('click', function (evt) {
@@ -459,7 +502,9 @@ dropdown5.addEventListener('click', function (evt) {
         }
       }
     })
+    console.log(currFeatures);
     henmaniaElementWeb.style.fontFeatureSettings = `"${currFeatures.join('", "')}"`;
+    henmaniaElementMobile.style.fontFeatureSettings = `"${currFeatures.join('", "')}"`;
     if (currFeatures.length === 0 || currFeatures[0] === 'normal') {
       c4fnoneCheckEl2.style.visibility = 'visible'
       henmaniaElementWeb.style.fontFeatureSettings = 'normal'
@@ -469,6 +514,11 @@ dropdown5.addEventListener('click', function (evt) {
   } else {
     return;
   }
+  henmaniaElementMobile.style.height = '103px';
+  henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px';
+  henmaniaElementWeb.style.height = '103px';
+  henmaniaElementWeb.style.height = henmaniaElementWeb.scrollHeight + 'px';
+  featuresHeightHen();
 });
 
 dropdown6.addEventListener('click', function (evt) {
@@ -554,6 +604,11 @@ dropdown6.addEventListener('click', function (evt) {
   } else {
     return;
   }
+  cake4freaksElementMobile.style.height = '103px';
+  cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px';
+  cake4freaksElementWeb.style.height = '103px';
+  cake4freaksElementWeb.style.height = cake4freaksElementWeb.scrollHeight + 'px';
+  featuresHeight();
 });
 
 
@@ -570,8 +625,10 @@ sunEl.addEventListener('click', function () {
   henmaniaElementWeb.style.color = 'black';
   henmaniaElementMobile.style.backgroundColor = 'white';
   henmaniaElementMobile.style.color = 'black';
-  font1.style.border = '1px solid black';
-  font2.style.border = '1px solid black';
+  font1.style.borderTop = '1px solid black';
+  font1.style.borderBottom = '1px solid black';
+  font2.style.borderTop = '1px solid black';
+  font2.style.borderBottom = '1px solid black';
   dropdown1.style.backgroundColor = 'white';
   dropdown1.style.border = '1px solid black';
   dropdown2.style.backgroundColor = 'white';
@@ -621,8 +678,10 @@ moonEl.addEventListener('click', function () {
   henmaniaElementWeb.style.color = 'white';
   henmaniaElementMobile.style.backgroundColor = 'black';
   henmaniaElementMobile.style.color = 'white';
-  font1.style.border = '1px solid white';
-  font2.style.border = '1px solid white';
+  font1.style.borderTop = '1px solid white';
+  font1.style.borderBottom = '1px solid white';
+  font2.style.borderTop = '1px solid white';
+  font2.style.borderBottom = '1px solid white';
   dropdown1.style.backgroundColor = 'black';
   dropdown1.style.border = '1px solid white';
   dropdown2.style.backgroundColor = 'black';
