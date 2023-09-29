@@ -625,8 +625,10 @@ sunEl.addEventListener('click', function () {
   henmaniaElementWeb.style.color = 'black';
   henmaniaElementMobile.style.backgroundColor = 'white';
   henmaniaElementMobile.style.color = 'black';
-  font1.style.border = '1px solid black';
-  font2.style.border = '1px solid black';
+  font1.style.borderTop = '1px solid black';
+  font1.style.borderBottom = '1px solid black';
+  font2.style.borderTop = '1px solid black';
+  font2.style.borderBottom = '1px solid black';
   dropdown1.style.backgroundColor = 'white';
   dropdown1.style.border = '1px solid black';
   dropdown2.style.backgroundColor = 'white';
@@ -676,8 +678,10 @@ moonEl.addEventListener('click', function () {
   henmaniaElementWeb.style.color = 'white';
   henmaniaElementMobile.style.backgroundColor = 'black';
   henmaniaElementMobile.style.color = 'white';
-  font1.style.border = '1px solid white';
-  font2.style.border = '1px solid white';
+  font1.style.borderTop = '1px solid white';
+  font1.style.borderBottom = '1px solid white';
+  font2.style.borderTop = '1px solid white';
+  font2.style.borderBottom = '1px solid white';
   dropdown1.style.backgroundColor = 'black';
   dropdown1.style.border = '1px solid white';
   dropdown2.style.backgroundColor = 'black';
