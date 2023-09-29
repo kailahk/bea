@@ -167,9 +167,9 @@ body {
 }
 
 .font-textarea-container {
-    border: 1px solid white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
     background-color: inherit;
-    padding-left: 25px;
     display: flex;
     align-items: flex-start;
     margin-top: 8px;
@@ -182,16 +182,22 @@ body {
 
 textarea {
     /* min-height and min-width don't allow text box to get smaller than its container */
-    height: 102px;
-    min-height: 103px;
-    min-width: 698px;
+    height: 202px;
+    min-height: 202px;
+    min-width: 726px;
     background-color: black;
     border-style: none;
     color: white;
     font-size: 75px;
     line-height: 120%;
+    text-align: center;
     width: 100%;
     box-sizing: border-box;
+    padding: 50px 5px;
+}
+
+::-webkit-resizer {
+    display: none;
 }
 
 textarea:focus {

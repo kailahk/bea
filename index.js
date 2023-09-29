@@ -51,23 +51,23 @@ const cake4freaksFont = new FontFace('cake4freaks', 'url(static/fonts/Cake4Freak
 const henmaniaFont = new FontFace('henmania', 'url(static/fonts/Henmania-Black.otf)');
 
 function autoResize() {
-  cake4freaksElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  cake4freaksElementMobile.style.height = '103px'; 
+  cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px'; 
 }
 
 function autoResizeHen() {
-  henmaniaElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  henmaniaElementMobile.style.height = '103px'; 
+  henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px'; 
 }
 
 function autoResizeCakeWeb() {
-  cake4freaksElementWeb.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  cake4freaksElementWeb.style.height = cake4freaksElementWeb.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  cake4freaksElementWeb.style.height = '103px'; 
+  cake4freaksElementWeb.style.height = cake4freaksElementWeb.scrollHeight + 'px';
 }
 
 function autoResizeHenWeb() {
-  henmaniaElementWeb.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  henmaniaElementWeb.style.height = henmaniaElementWeb.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  henmaniaElementWeb.style.height = '103px'; 
+  henmaniaElementWeb.style.height = henmaniaElementWeb.scrollHeight + 'px'; 
 }
 
 slider1.addEventListener('input', function () {
@@ -75,10 +75,10 @@ slider1.addEventListener('input', function () {
   cake4freaksElementMobile.style.fontSize = this.value + 'px';
   cake4freaksElementWeb.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider3.value) + 'px';
   cake4freaksElementMobile.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider3.value) + 'px';
-  cake4freaksElementWeb.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  cake4freaksElementWeb.style.height = cake4freaksElementWeb.scrollHeight + 'px'; // Set the height to match the scrollHeight
-  cake4freaksElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  cake4freaksElementWeb.style.height = '103px'; 
+  cake4freaksElementWeb.style.height = cake4freaksElementWeb.scrollHeight + 'px'; 
+  cake4freaksElementMobile.style.height = '103px'; 
+  cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px'; 
 });
 
 slider2.addEventListener('input', function () {
@@ -86,28 +86,28 @@ slider2.addEventListener('input', function () {
   henmaniaElementWeb.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider4.value) + 'px';
   henmaniaElementMobile.style.fontSize = this.value + 'px';
   henmaniaElementMobile.style.lineHeight = parseInt(this.value) * 1.2 + parseInt(slider4.value) + 'px';
-  henmaniaElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
-  henmaniaElementWeb.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  henmaniaElementWeb.style.height = henmaniaElementWeb.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  henmaniaElementMobile.style.height = '103px'; 
+  henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px'; 
+  henmaniaElementWeb.style.height = '103px'; 
+  henmaniaElementWeb.style.height = henmaniaElementWeb.scrollHeight + 'px'; 
 });
 
 slider3.addEventListener('input', function () {
   cake4freaksElementWeb.style.lineHeight = parseInt(slider1.value) * 1.2 + parseInt(this.value) + 'px';
   cake4freaksElementMobile.style.lineHeight = parseInt(slider1.value) * 1.2 + parseInt(this.value) + 'px';
-  cake4freaksElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
-  cake4freaksElementWeb.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  cake4freaksElementWeb.style.height = cake4freaksElementWeb.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  cake4freaksElementMobile.style.height = '103px'; 
+  cake4freaksElementMobile.style.height = cake4freaksElementMobile.scrollHeight + 'px'; 
+  cake4freaksElementWeb.style.height = '103px'; 
+  cake4freaksElementWeb.style.height = cake4freaksElementWeb.scrollHeight + 'px'; 
 });
 
 slider4.addEventListener('input', function () {
   henmaniaElementWeb.style.lineHeight = parseInt(slider2.value) * 1.2 + parseInt(this.value) + 'px';
   henmaniaElementMobile.style.lineHeight = parseInt(slider2.value) * 1.2 + parseInt(this.value) + 'px';
-  henmaniaElementMobile.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px'; // Set the height to match the scrollHeight
-  henmaniaElementWeb.style.height = '103px'; // Reset the height to auto to shrink the textarea if needed
-  henmaniaElementWeb.style.height = henmaniaElementWeb.scrollHeight + 'px'; // Set the height to match the scrollHeight
+  henmaniaElementMobile.style.height = '103px'; 
+  henmaniaElementMobile.style.height = henmaniaElementMobile.scrollHeight + 'px'; 
+  henmaniaElementWeb.style.height = '103px'; 
+  henmaniaElementWeb.style.height = henmaniaElementWeb.scrollHeight + 'px'; 
 });
 
 dropdown1.addEventListener('click', function (evt) {
