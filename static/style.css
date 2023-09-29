@@ -194,6 +194,7 @@ textarea {
     width: 100%;
     box-sizing: border-box;
     padding: 50px 5px;
+    resize:none;
 }
 
 ::-webkit-resizer {
