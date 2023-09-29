@@ -51,6 +51,8 @@ const cake4freaksFont = new FontFace('cake4freaks', 'url(static/fonts/Cake4Freak
 const henmaniaFont = new FontFace('henmania', 'url(static/fonts/Henmania-Black.otf)');
 const featuresOptionc4f = document.getElementById('cake-features');
 const featuresOptionHen = document.getElementById('hen-features');
+const c4fTitle = document.getElementById('c4f-title');
+const henTitle = document.getElementById('hen-title');
 
 window.addEventListener('resize', featuresHeight);
 window.addEventListener('resize', featuresHeightHen);
@@ -165,6 +167,8 @@ dropdown1.addEventListener('click', function (evt) {
     c4fpnumCheckEl.style.visibility = 'hidden'
     c4ftnumCheckEl.style.visibility = 'hidden'
     c4fcaseCheckEl.style.visibility = 'hidden'
+    c4fTitle.innerHTML = 'CAKE4FREAKS&#x2195;'
+    c4fTitle.style.marginRight = '-120px'
   } else if (evt.target.innerHTML === "HENMANIA") {
     cakeFeatures = [true, false, false, false, false, false];
     henmaniaFeatures2 = [true, false, false, false, false, false];
@@ -186,6 +190,8 @@ dropdown1.addEventListener('click', function (evt) {
     c4fpnumCheckEl.style.visibility = 'hidden'
     c4ftnumCheckEl.style.visibility = 'hidden'
     c4fcaseCheckEl.style.visibility = 'hidden'
+    c4fTitle.innerHTML = 'HENMANIA&#x2195;'
+    c4fTitle.style.marginRight = '-73px'
   }
 });
 
@@ -211,6 +217,8 @@ dropdown2.addEventListener('click', function (evt) {
     c4fpnumCheckEl2.style.visibility = 'hidden'
     c4ftnumCheckEl2.style.visibility = 'hidden'
     c4fcaseCheckEl2.style.visibility = 'hidden'
+    henTitle.innerHTML = 'CAKE4FREAKS&#x2195;'
+    henTitle.style.marginRight = '-120px'
   } else if (evt.target.innerHTML === "HENMANIA") {
     henmaniaFeatures = [true, false, false, false, false, false];
     cakeFeatures2 = [true, false, false, false, false, false];
@@ -232,6 +240,8 @@ dropdown2.addEventListener('click', function (evt) {
     c4fpnumCheckEl2.style.visibility = 'hidden'
     c4ftnumCheckEl2.style.visibility = 'hidden'
     c4fcaseCheckEl2.style.visibility = 'hidden'
+    henTitle.innerHTML = 'HENMANIA&#x2195;'
+    henTitle.style.marginRight = '-73px'
   }
 });
 
