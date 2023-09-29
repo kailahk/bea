@@ -217,7 +217,7 @@ label {
 }
 
 .options>* {
-    width: 190px;
+    width: 250px;
     display: flex;
     justify-content: space-between;
 }
@@ -229,10 +229,6 @@ a {
 
 a:hover {
     color: pink;
-}
-
-.size-option {
-    width: 203px;
 }
 
 .slider {
@@ -292,7 +288,8 @@ a:hover {
     letter-spacing: 1.5px;
 }
 .leading-option > label {
-    padding-right: 18px;
+    padding-right: 65px;
+    margin-left: -34px;
 }
 .bea .top-row {
     grid-row: 1;
@@ -437,9 +434,13 @@ a:hover {
 .features-option {
     position: relative;
     display: inline-block;
-    bottom: 6px;
     padding-left: 50px;
+    left: 323px;
     cursor: pointer;
+}
+
+#hen-features {
+    left: 370px;
 }
 
 .features-option:hover .dropdown-content {
@@ -447,8 +448,9 @@ a:hover {
 }
 
 .features-option>div.dropdown-content {
-    left: 5px;
-    top: 36px;
+    left: -22px;
+    top: -125px;
+    /* top: 36px lines the box up perfectly below the features-option */
     min-width: 185px !important;
     height: 128px;
     padding-top: 10px;
