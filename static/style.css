@@ -162,7 +162,7 @@ body {
     letter-spacing: 4px;
 }
 
-.cake4freaks-section h3 {
+.cake4freaks-section h3, .henmania-section h3 {
     font-feature-settings: "case";
 }
 
