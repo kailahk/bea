@@ -60,6 +60,50 @@ window.addEventListener('resize', autoResize);
 window.addEventListener('resize', autoResizeHen);
 window.addEventListener('resize', autoResizeCakeWeb);
 window.addEventListener('resize', autoResizeHenWeb);
+window.addEventListener('resize', featuresCake);
+window.addEventListener('resize', featuresHen);
+
+function featuresCake() {
+  if (c4fTitle.innerHTML === 'CAKE4FREAKS↕') {
+    if (window.innerWidth <= 750) {
+      c4fTitle.style.marginRight = '-120px';
+      dropdown1.style.left = '177px'
+    } else {
+      c4fTitle.style.marginRight = '0px';
+      dropdown1.style.left = '236px'
+    }
+  }
+  if (c4fTitle.innerHTML === 'HENMANIA↕') {
+    if (window.innerWidth <= 750) {
+      c4fTitle.style.marginRight = '-73px';
+      dropdown1.style.left = '177px'
+    } else {
+      c4fTitle.style.marginRight = '45px';
+      dropdown1.style.left = '190px'
+    }
+  }
+}
+
+function featuresHen() {
+  if (henTitle.innerHTML === 'CAKE4FREAKS↕') {
+    if (window.innerWidth <= 750) {
+      dropdown2.style.left = '177px'
+      featuresOptionHen.style.left = '-167px'
+    } else {
+      dropdown2.style.left = '236px'
+      featuresOptionHen.style.left = '443px'
+    }
+  }
+  if (henTitle.innerHTML === 'HENMANIA↕') {
+    if (window.innerWidth <= 750) {
+      dropdown2.style.left = '177px'
+      featuresOptionHen.style.left = '-167px'
+    } else {
+      dropdown2.style.left = '189px'
+      featuresOptionHen.style.left = '443px'
+    }
+  }
+}
 
 function autoResize() {
   cake4freaksElementMobile.style.height = '103px';
@@ -168,7 +212,6 @@ dropdown1.addEventListener('click', function (evt) {
     c4ftnumCheckEl.style.visibility = 'hidden'
     c4fcaseCheckEl.style.visibility = 'hidden'
     c4fTitle.innerHTML = 'CAKE4FREAKS&#x2195;'
-    c4fTitle.style.marginRight = '-120px'
   } else if (evt.target.innerHTML === "HENMANIA") {
     cakeFeatures = [true, false, false, false, false, false];
     henmaniaFeatures2 = [true, false, false, false, false, false];
@@ -191,8 +234,10 @@ dropdown1.addEventListener('click', function (evt) {
     c4ftnumCheckEl.style.visibility = 'hidden'
     c4fcaseCheckEl.style.visibility = 'hidden'
     c4fTitle.innerHTML = 'HENMANIA&#x2195;'
-    c4fTitle.style.marginRight = '-73px'
   }
+  featuresCake();
+  autoResize();
+  autoResizeCakeWeb();
 });
 
 dropdown2.addEventListener('click', function (evt) {
@@ -243,6 +288,9 @@ dropdown2.addEventListener('click', function (evt) {
     henTitle.innerHTML = 'HENMANIA&#x2195;'
     henTitle.style.marginRight = '-73px'
   }
+  featuresHen();
+  autoResizeHen();
+  autoResizeHenWeb();
 });
 
 dropdown3.addEventListener('click', function (evt) {
