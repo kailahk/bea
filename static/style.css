@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Cake4Freaks-Regular';
-    src: url('./fonts/Cake4Freaks-Regular.woff');
+    src: url('./fonts/Cake4Freaks-RegularText.otf');
     font-weight: 400;
 }
 
@@ -33,7 +33,6 @@ body {
     display: grid;
     grid-template-columns: repeat(23, 31.5px);
     grid-template-rows: auto;
-    justify-items: center;
 }
 
 .heading .top-rows {
@@ -43,7 +42,7 @@ body {
 
 .heading>* {
     line-height: 28px;
-    letter-spacing: 1.5px;
+    letter-spacing: 4px;
 }
 
 .heading .left-rows {
@@ -72,7 +71,7 @@ body {
 }
 
 .heading-name .name {
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 }
 
 #henmania-input-web, #henmania-input-phone {
@@ -119,23 +118,33 @@ body {
 .contact-info {
     grid-column: 3 / 22;
     grid-row: 2 / 7;
-    display: flex;
+    display: grid;
     font-size: 17px;
     text-align: left;
     line-height: 21px;
+    grid-template-columns: 1.3fr 1fr;
 }
 
 .contact-info>p {
     margin: 0;
     font-size: 20px;
 }
+.contact-info>p:first-child {
+    display: flex;
+    align-items: center;
+    font-feature-settings: "ss01" 1; 
+}
 
 .email {
     font-size: 22px;
+    width: 100%;
+    text-align: center;
+    line-height: 120%;
 }
 
 .email p {
     margin-top: 20px;
+    letter-spacing: 3px;
 }
 
 .cake4freaks-section,
@@ -159,7 +168,7 @@ body {
 .henmania-section h3 {
     font-size: 23px;
     margin: 0;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 }
 
 .cake4freaks-section h3, .henmania-section h3 {
@@ -275,7 +284,7 @@ a:hover {
 .bea {
     padding-top: 30px;
     display: grid;
-    grid-template-columns: repeat(9, 30.5px);
+    grid-template-columns: repeat(9, 31.5px);
     grid-template-rows: repeat(13, 28px);
     align-items: center;
     letter-spacing: 1.5px;
@@ -286,7 +295,8 @@ a:hover {
 
 .bea>* {
     line-height: 28px;
-    letter-spacing: 1.5px;
+    letter-spacing: 4px;
+    justify-items: flex-start;
 }
 
 .bea .top-row {
@@ -311,6 +321,7 @@ a:hover {
 .bea .right-rows {
     grid-column: 9;
     grid-row: 3 / 12;
+    margin-left: 3px;
 }
 
 .bea-photo {
@@ -318,13 +329,12 @@ a:hover {
     grid-row: 2 / 13;
     grid-column: 2 / 12;
     border: 0px;
-    margin-left: 6px;
-    margin-top: 6px;
+    margin-left: 10px;
 }
 
 .bea-info {
     text-align: left;
-    padding: 0 40px;
+    padding: 0 30px;
     font-size: 22px;
     line-height: 130%;
 }
@@ -332,6 +342,7 @@ a:hover {
 .tumblr-web {
     margin: 30px 0;
     display: flex;
+    justify-content: space-between;
 }
 
 .tumblr-web>a {
@@ -342,6 +353,7 @@ a:hover {
     position: relative;
     display: inline-block;
     cursor: pointer;
+    width: fit-content;
 }
 
 .dropdown:hover .dropdown-content {
@@ -373,14 +385,16 @@ a:hover {
     margin: 5px 0;
     font-size: 20px;
 }
-
+.cake4freaks-section > .dropdown, .henmania-section > .dropdown {
+    width: 60%;    
+}
 .cake4freaks-section>div>.dropdown-content {
-    left: 236px;
+    left: 305px;
     bottom: 8px;
 }
 
 .henmania-section>div>.dropdown-content {
-    left: 189px;
+    left: 265px;
     bottom: 8px;
 }
 
@@ -411,6 +425,7 @@ a:hover {
 #c4f-oldstyle-figures,
 #c4f-case-sensitive,
 #c4f-proportional-figures,
+#c4f-standard-ligatures,
 #hen-oldstyle-figures,
 #hen-liga-figures,
 #hen-ss01-figures,
@@ -421,6 +436,7 @@ a:hover {
 #c4f-oldstyle-figures2,
 #c4f-case-sensitive2,
 #c4f-proportional-figures2,
+#c4f-standard-ligatures2,
 #hen-oldstyle-figures2,
 #hen-liga-figures2,
 #hen-ss01-figures2,
@@ -432,13 +448,12 @@ a:hover {
 .features-option {
     position: relative;
     display: inline-block;
-    padding-left: 50px;
-    left: 323px;
+    left: 175px;
     cursor: pointer;
 }
 
 #hen-features {
-    left: 370px;
+    left: 179px;
     top: 0px;
 }
 
@@ -511,8 +526,15 @@ a:hover {
 .size-option {
     width: 203px;
 }
+.heading #right-rows-web {
+    margin-left: 5px;
+}
 
-@media (max-width: 750px) {
+.wip {
+    letter-spacing: 1.5px;
+}
+
+@media (max-width: 768px) {
 
     #cake4freaks-input-phone, #henmania-input-phone {
         display: flex;
