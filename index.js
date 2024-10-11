@@ -66,43 +66,38 @@ window.addEventListener('resize', featuresCake);
 window.addEventListener('resize', featuresHen);
 
 function featuresCake() {
-  if (c4fTitle.innerHTML === 'CAKE4FREAKS↕') {
+  if (c4fTitle.innerHTML.includes('CAKE4FREAKS')) {
     if (window.innerWidth <= 750) {
-      c4fTitle.style.marginRight = '-120px';
-      dropdown1.style.left = '177px'
+      c4fTitle.style.marginLeft = '0px';
     } else {
-      c4fTitle.style.marginRight = '0px';
-      dropdown1.style.left = '236px'
+      c4fTitle.style.marginLeft = '0px';
+      dropdown1.style.left = '305px';
     }
   }
-  if (c4fTitle.innerHTML === 'HENMANIA↕') {
+  if (c4fTitle.innerHTML.includes('HENMANIA')) {
     if (window.innerWidth <= 750) {
-      c4fTitle.style.marginRight = '-73px';
-      dropdown1.style.left = '177px'
+      c4fTitle.style.marginLeft = '-24px';
     } else {
-      c4fTitle.style.marginRight = '45px';
-      dropdown1.style.left = '190px'
+      c4fTitle.style.marginLeft = '0px';
+      dropdown1.style.left = '265px';
     }
   }
 }
 
 function featuresHen() {
-  if (henTitle.innerHTML === 'CAKE4FREAKS↕') {
+  if (henTitle.innerHTML.includes('CAKE4FREAKS')) {
     if (window.innerWidth <= 750) {
-      dropdown2.style.left = '177px'
-      featuresOptionHen.style.left = '-167px'
+      henTitle.style.marginLeft = '0px'
     } else {
-      dropdown2.style.left = '236px'
-      featuresOptionHen.style.left = '443px'
+      dropdown2.style.left = '305px'
     }
   }
-  if (henTitle.innerHTML === 'HENMANIA↕') {
+  if (henTitle.innerHTML.includes('HENMANIA')) {
     if (window.innerWidth <= 750) {
-      dropdown2.style.left = '177px'
-      featuresOptionHen.style.left = '-167px'
+      henTitle.style.marginLeft = '-23px'
     } else {
-      dropdown2.style.left = '189px'
-      featuresOptionHen.style.left = '443px'
+      dropdown2.style.left = '265px'
+      henTitle.style.marginLeft = '0px'
     }
   }
 }
@@ -211,7 +206,7 @@ dropdown1.addEventListener('click', function (evt) {
     c4flnumCheckEl.style.visibility = 'hidden'
     c4fonumCheckEl.style.visibility = 'hidden'
     c4fcaseCheckEl.style.visibility = 'hidden'
-    c4fTitle.innerHTML = 'CAKE4FREAKS&#x2195;'
+    c4fTitle.innerHTML = 'CAKE4FREAKS <span class="wip">(wip) </span>&#x2195;'
   } else if (evt.target.innerHTML === "HENMANIA") {
     cakeFeatures = [true, false, false, false, false];
     henmaniaFeatures2 = [true, false, false, false, false, false];
@@ -232,7 +227,7 @@ dropdown1.addEventListener('click', function (evt) {
     c4fonumCheckEl.style.visibility = 'hidden'
     c4fligaCheckEl.style.visibility = 'hidden'
     c4fcaseCheckEl.style.visibility = 'hidden'
-    c4fTitle.innerHTML = 'HENMANIA&#x2195;'
+    c4fTitle.innerHTML = 'HENMANIA <span class="wip">(wip) </span>&#x2195;'
   }
   featuresCake();
   autoResize();
@@ -260,8 +255,7 @@ dropdown2.addEventListener('click', function (evt) {
     c4fonumCheckEl2.style.visibility = 'hidden'
     c4fligaCheckEl2.style.visibility = 'hidden'
     c4fcaseCheckEl2.style.visibility = 'hidden'
-    henTitle.innerHTML = 'CAKE4FREAKS&#x2195;'
-    henTitle.style.marginRight = '-120px'
+    henTitle.innerHTML = 'CAKE4FREAKS <span class="wip">(wip) </span>&#x2195;'
   } else if (evt.target.innerHTML === "HENMANIA") {
     henmaniaFeatures = [true, false, false, false, false, false];
     cakeFeatures2 = [true, false, false, false, false];
@@ -282,8 +276,7 @@ dropdown2.addEventListener('click', function (evt) {
     c4fonumCheckEl2.style.visibility = 'hidden'
     c4fligaCheckEl2.style.visibility = 'hidden'
     c4fcaseCheckEl2.style.visibility = 'hidden'
-    henTitle.innerHTML = 'HENMANIA&#x2195;'
-    henTitle.style.marginRight = '-73px'
+    henTitle.innerHTML = 'HENMANIA <span class="wip">(wip) </span>&#x2195;'
   }
   featuresHen();
   autoResizeHen();
@@ -344,7 +337,8 @@ dropdown3.addEventListener('click', function (evt) {
         c4fnoneCheckEl.style.visibility = 'hidden'
         cakeFeatures[3] = true;
         c4fligaCheckEl.style.visibility = 'visible'
-      } /*
+      }
+      /*
     } else if (evt.target.innerHTML === 'TABULAR FIGURES') {
       if (cakeFeatures[4] === true) {
         cakeFeatures[4] = false;
@@ -379,7 +373,7 @@ dropdown3.addEventListener('click', function (evt) {
     })
     cake4freaksElementWeb.style.fontFeatureSettings = `"${currFeatures.join('", "')}"`;
     cake4freaksElementMobile.style.fontFeatureSettings = `"${currFeatures.join('", "')}"`;
-    if (currFeatures.length === 0 || currFeatures[0] === 'normal') {
+    if (currFeatures.length === 0 || currFeatures[0] === 'none') {
       c4fnoneCheckEl.style.visibility = 'visible'
       cake4freaksElementWeb.style.fontFeatureSettings = 'normal'
       cake4freaksElementMobile.style.fontFeatureSettings = 'normal'
