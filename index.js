@@ -15,15 +15,16 @@ const moonEl = document.getElementById('moon');
 const bodyEl = document.getElementById('body');
 const dropdown3 = document.getElementById('dropdown-content-3');
 const dropdown4 = document.getElementById('dropdown-content-4');
-let cakeFeatures = [true, false, false, false, false, false];
-let cakeFeaturesCSS = ['normal', 'lnum', 'onum', 'pnum', 'tnum', 'case'];
+let cakeFeatures = [true, false, false, false, false];
+let cakeFeaturesCSS = ['none', 'lnum', 'onum', 'liga', 'case'];
 let henmaniaFeatures = [true, false, false, false, false, false];
 let henmaniaFeaturesCSS = ['normal', 'onum', 'liga', 'ss01', 'ss02', 'ss03'];
 const c4fnoneCheckEl = document.getElementById('c4f-none');
 const c4flnumCheckEl = document.getElementById('c4f-lining-figures');
 const c4fonumCheckEl = document.getElementById('c4f-oldstyle-figures');
-const c4fpnumCheckEl = document.getElementById('c4f-proportional-figures');
-const c4ftnumCheckEl = document.getElementById('c4f-tabular-figures');
+/* const c4fpnumCheckEl = document.getElementById('c4f-proportional-figures');*/
+const c4fligaCheckEl = document.getElementById('c4f-standard-ligatures');
+/*const c4ftnumCheckEl = document.getElementById('c4f-tabular-figures');*/
 const c4fcaseCheckEl = document.getElementById('c4f-case-sensitive');
 const henNoneCheckEl = document.getElementById('hen-none');
 const henOnumCheckEl = document.getElementById('hen-oldstyle-figures');
@@ -33,13 +34,14 @@ const henss02CheckEl = document.getElementById('hen-ss02-figures');
 const henss03CheckEl = document.getElementById('hen-ss03-figures');
 const dropdown5 = document.getElementById('dropdown-content-5');
 const dropdown6 = document.getElementById('dropdown-content-6');
-let cakeFeatures2 = [true, false, false, false, false, false];
+let cakeFeatures2 = [true, false, false, false, false];
 let henmaniaFeatures2 = [true, false, false, false, false, false];
 const c4fnoneCheckEl2 = document.getElementById('c4f-none2');
 const c4flnumCheckEl2 = document.getElementById('c4f-lining-figures2');
 const c4fonumCheckEl2 = document.getElementById('c4f-oldstyle-figures2');
-const c4fpnumCheckEl2 = document.getElementById('c4f-proportional-figures2');
-const c4ftnumCheckEl2 = document.getElementById('c4f-tabular-figures2');
+/* const c4fpnumCheckEl2 = document.getElementById('c4f-proportional-figures2'); */
+const c4fligaCheckEl2 = document.getElementById('c4f-standard-ligatures2');
+/* const c4ftnumCheckEl2 = document.getElementById('c4f-tabular-figures2');*/
 const c4fcaseCheckEl2 = document.getElementById('c4f-case-sensitive2');
 const henNoneCheckEl2 = document.getElementById('hen-none2');
 const henOnumCheckEl2 = document.getElementById('hen-oldstyle-figures2');
@@ -47,7 +49,7 @@ const henLigaCheckEl2 = document.getElementById('hen-liga-figures2');
 const henss01CheckEl2 = document.getElementById('hen-ss01-figures2');
 const henss02CheckEl2 = document.getElementById('hen-ss02-figures2');
 const henss03CheckEl2 = document.getElementById('hen-ss03-figures2');
-const cake4freaksFont = new FontFace('cake4freaks', 'url(static/fonts/Cake4Freaks-Regular.woff)');
+const cake4freaksFont = new FontFace('cake4freaks', 'url(static/fonts/Cake4Freaks-RegularText.otf)');
 const henmaniaFont = new FontFace('henmania', 'url(static/fonts/Henmania-Black.otf)');
 const featuresOptionc4f = document.getElementById('cake-features');
 const featuresOptionHen = document.getElementById('hen-features');
@@ -191,7 +193,7 @@ slider4.addEventListener('input', function () {
 
 dropdown1.addEventListener('click', function (evt) {
   if (evt.target.innerHTML === "CAKE4FREAKS") {
-    cakeFeatures = [true, false, false, false, false, false];
+    cakeFeatures = [true, false, false, false, false];
     henmaniaFeatures2 = [true, false, false, false, false, false];
     cake4freaksElementWeb.style.fontFamily = "Cake4Freaks-Regular";
     cake4freaksElementMobile.style.fontFamily = "Cake4Freaks-Regular";
@@ -208,12 +210,10 @@ dropdown1.addEventListener('click', function (evt) {
     henss03CheckEl2.style.visibility = 'hidden'
     c4flnumCheckEl.style.visibility = 'hidden'
     c4fonumCheckEl.style.visibility = 'hidden'
-    c4fpnumCheckEl.style.visibility = 'hidden'
-    c4ftnumCheckEl.style.visibility = 'hidden'
     c4fcaseCheckEl.style.visibility = 'hidden'
     c4fTitle.innerHTML = 'CAKE4FREAKS&#x2195;'
   } else if (evt.target.innerHTML === "HENMANIA") {
-    cakeFeatures = [true, false, false, false, false, false];
+    cakeFeatures = [true, false, false, false, false];
     henmaniaFeatures2 = [true, false, false, false, false, false];
     cake4freaksElementWeb.style.fontFamily = "Henmania-Black";
     cake4freaksElementMobile.style.fontFamily = "Henmania-Black";
@@ -230,8 +230,7 @@ dropdown1.addEventListener('click', function (evt) {
     c4fnoneCheckEl.style.visibility = 'hidden'
     c4flnumCheckEl.style.visibility = 'hidden'
     c4fonumCheckEl.style.visibility = 'hidden'
-    c4fpnumCheckEl.style.visibility = 'hidden'
-    c4ftnumCheckEl.style.visibility = 'hidden'
+    c4fligaCheckEl.style.visibility = 'hidden'
     c4fcaseCheckEl.style.visibility = 'hidden'
     c4fTitle.innerHTML = 'HENMANIA&#x2195;'
   }
@@ -242,7 +241,7 @@ dropdown1.addEventListener('click', function (evt) {
 
 dropdown2.addEventListener('click', function (evt) {
   if (evt.target.innerHTML === "CAKE4FREAKS") {
-    cakeFeatures2 = [true, false, false, false, false, false];
+    cakeFeatures2 = [true, false, false, false, false];
     henmaniaFeatures = [true, false, false, false, false, false];
     henmaniaElementWeb.style.fontFamily = "Cake4Freaks-Regular";
     henmaniaElementWeb.style.fontFeatureSettings = "normal"
@@ -259,14 +258,13 @@ dropdown2.addEventListener('click', function (evt) {
     c4fnoneCheckEl2.style.visibility = 'visible'
     c4flnumCheckEl2.style.visibility = 'hidden'
     c4fonumCheckEl2.style.visibility = 'hidden'
-    c4fpnumCheckEl2.style.visibility = 'hidden'
-    c4ftnumCheckEl2.style.visibility = 'hidden'
+    c4fligaCheckEl2.style.visibility = 'hidden'
     c4fcaseCheckEl2.style.visibility = 'hidden'
     henTitle.innerHTML = 'CAKE4FREAKS&#x2195;'
     henTitle.style.marginRight = '-120px'
   } else if (evt.target.innerHTML === "HENMANIA") {
     henmaniaFeatures = [true, false, false, false, false, false];
-    cakeFeatures2 = [true, false, false, false, false, false];
+    cakeFeatures2 = [true, false, false, false, false];
     henmaniaElementWeb.style.fontFamily = "Henmania-Black";
     henmaniaElementWeb.style.fontFeatureSettings = "normal";
     henmaniaElementMobile.style.fontFamily = "Henmania-Black";
@@ -282,8 +280,7 @@ dropdown2.addEventListener('click', function (evt) {
     c4fnoneCheckEl2.style.visibility = 'hidden'
     c4flnumCheckEl2.style.visibility = 'hidden'
     c4fonumCheckEl2.style.visibility = 'hidden'
-    c4fpnumCheckEl2.style.visibility = 'hidden'
-    c4ftnumCheckEl2.style.visibility = 'hidden'
+    c4fligaCheckEl2.style.visibility = 'hidden'
     c4fcaseCheckEl2.style.visibility = 'hidden'
     henTitle.innerHTML = 'HENMANIA&#x2195;'
     henTitle.style.marginRight = '-73px'
@@ -296,12 +293,11 @@ dropdown2.addEventListener('click', function (evt) {
 dropdown3.addEventListener('click', function (evt) {
   if (evt.target.tagName === 'P') {
     if (evt.target.innerHTML === 'NONE') {
-      cakeFeatures = [true, false, false, false, false, false];
+      cakeFeatures = [true, false, false, false, false];
       c4fnoneCheckEl.style.visibility = 'visible'
       c4flnumCheckEl.style.visibility = 'hidden'
       c4fonumCheckEl.style.visibility = 'hidden'
-      c4fpnumCheckEl.style.visibility = 'hidden'
-      c4ftnumCheckEl.style.visibility = 'hidden'
+      c4fligaCheckEl.style.visibility = 'hidden'
       c4fcaseCheckEl.style.visibility = 'hidden'
     } else if (evt.target.innerHTML === 'LINING FIGURES') {
       if (cakeFeatures[1] === true) {
@@ -326,7 +322,7 @@ dropdown3.addEventListener('click', function (evt) {
         c4fonumCheckEl.style.visibility = 'visible'
         cakeFeatures[1] = false;
         c4flnumCheckEl.style.visibility = 'hidden'
-      }
+      } /*
     } else if (evt.target.innerHTML === 'PROPORTIONAL FIGURES') {
       if (cakeFeatures[3] === true) {
         cakeFeatures[3] = false;
@@ -338,7 +334,17 @@ dropdown3.addEventListener('click', function (evt) {
         c4fpnumCheckEl.style.visibility = 'visible'
         cakeFeatures[4] = false;
         c4ftnumCheckEl.style.visibility = 'hidden'
-      }
+      } */
+    } else if (evt.target.innerHTML === 'STANDARD LIGATURES') {
+      if (cakeFeatures[3] === true) {
+        cakeFeatures[3] = false;
+        c4fligaCheckEl.style.visibility = 'hidden'
+      } else {
+        cakeFeatures[0] = false;
+        c4fnoneCheckEl.style.visibility = 'hidden'
+        cakeFeatures[3] = true;
+        c4fligaCheckEl.style.visibility = 'visible'
+      } /*
     } else if (evt.target.innerHTML === 'TABULAR FIGURES') {
       if (cakeFeatures[4] === true) {
         cakeFeatures[4] = false;
@@ -349,16 +355,15 @@ dropdown3.addEventListener('click', function (evt) {
         cakeFeatures[4] = true;
         c4ftnumCheckEl.style.visibility = 'visible'
         cakeFeatures[3] = false;
-        c4fpnumCheckEl.style.visibility = 'hidden'
-      }
+      } */
     } else if (evt.target.innerHTML === 'CASE SENSITIVE') {
-      if (cakeFeatures[5] === true) {
-        cakeFeatures[5] = false;
+      if (cakeFeatures[4] === true) {
+        cakeFeatures[4] = false;
         c4fcaseCheckEl.style.visibility = 'hidden'
       } else {
         cakeFeatures[0] = false;
         c4fnoneCheckEl.style.visibility = 'hidden'
-        cakeFeatures[5] = true;
+        cakeFeatures[4] = true;
         c4fcaseCheckEl.style.visibility = 'visible'
       }
     }
@@ -488,8 +493,7 @@ dropdown5.addEventListener('click', function (evt) {
       c4fnoneCheckEl2.style.visibility = 'visible'
       c4flnumCheckEl2.style.visibility = 'hidden'
       c4fonumCheckEl2.style.visibility = 'hidden'
-      c4fpnumCheckEl2.style.visibility = 'hidden'
-      c4ftnumCheckEl2.style.visibility = 'hidden'
+      c4fligaCheckEl2.style.visibility = 'hidden'
       c4fcaseCheckEl2.style.visibility = 'hidden'
     } else if (evt.target.innerHTML === 'LINING FIGURES') {
       if (cakeFeatures2[1] === true) {
@@ -514,7 +518,7 @@ dropdown5.addEventListener('click', function (evt) {
         c4fonumCheckEl2.style.visibility = 'visible'
         cakeFeatures2[1] = false;
         c4flnumCheckEl2.style.visibility = 'hidden'
-      }
+      } /*
     } else if (evt.target.innerHTML === 'PROPORTIONAL FIGURES') {
       if (cakeFeatures2[3] === true) {
         cakeFeatures2[3] = false;
@@ -526,7 +530,17 @@ dropdown5.addEventListener('click', function (evt) {
         c4fpnumCheckEl2.style.visibility = 'visible'
         cakeFeatures2[4] = false;
         c4ftnumCheckEl2.style.visibility = 'hidden'
-      }
+      } */
+    } else if (evt.target.innerHTML === 'STANDARD LIGATURES') {
+      if (cakeFeatures2[3] === true) {
+        cakeFeatures2[3] = false;
+        c4fligaCheckEl2.style.visibility = 'hidden'
+      } else {
+        cakeFeatures2[0] = false;
+        c4fnoneCheckEl2.style.visibility = 'hidden'
+        cakeFeatures2[3] = true;
+        c4fligaCheckEl2.style.visibility = 'visible'
+      } /*
     } else if (evt.target.innerHTML === 'TABULAR FIGURES') {
       if (cakeFeatures2[4] === true) {
         cakeFeatures2[4] = false;
@@ -537,16 +551,15 @@ dropdown5.addEventListener('click', function (evt) {
         cakeFeatures2[4] = true;
         c4ftnumCheckEl2.style.visibility = 'visible'
         cakeFeatures2[3] = false;
-        c4fpnumCheckEl2.style.visibility = 'hidden'
-      }
+      } */
     } else if (evt.target.innerHTML === 'CASE SENSITIVE') {
-      if (cakeFeatures2[5] === true) {
-        cakeFeatures2[5] = false;
+      if (cakeFeatures2[4] === true) {
+        cakeFeatures2[4] = false;
         c4fcaseCheckEl2.style.visibility = 'hidden'
       } else {
         cakeFeatures2[0] = false;
         c4fnoneCheckEl2.style.visibility = 'hidden'
-        cakeFeatures2[5] = true;
+        cakeFeatures2[4] = true;
         c4fcaseCheckEl2.style.visibility = 'visible'
       }
     }
