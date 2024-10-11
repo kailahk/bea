@@ -463,10 +463,9 @@ a:hover {
 
 .features-option>div.dropdown-content {
     left: -22px;
-    top: -125px;
-    /* top: 36px lines the box up perfectly below the features-option */
+    top: -115px;
     min-width: 185px !important;
-    height: 128px;
+    height:115px;
     padding-top: 10px;
 }
 
@@ -632,6 +631,7 @@ a:hover {
         grid-column: 9;
         display: flex;
         flex-direction: column;
+        margin-left: 3px;
     }
 
     .heading #bottom-rows-mobile {
@@ -705,7 +705,7 @@ a:hover {
     }
 
     .contact-info>a {
-        width: 137px;
+        width: 180px;
         margin: 0 auto;
     }
 
@@ -731,8 +731,11 @@ a:hover {
     }
 
     #cake-features, #hen-features {
-        left: -167px;
-        top: 210px;
+        left: -82px;
+        top: 200px !important;
+    }
+    #hen-features {
+        left: -84px;
     }
 
     .cake4freaks-section>div>div.dropdown-content>p,
@@ -746,7 +749,7 @@ a:hover {
     .cake4freaks-section>div>div#dropdown-content-1,
     .henmania-section>div>div#dropdown-content-2 {
         min-width: 110px;
-        bottom: 32px;
+        bottom: 28px;
         left: 177px;
     }
 
@@ -756,14 +759,6 @@ a:hover {
 
     .bea-section {
         width: 365px;
-    }
-
-    .henmania-section .dropdown h3 {
-        margin-right: -75px;
-    }
-
-    .cake4freaks-section .dropdown h3 {
-        margin-right: -120px;
     }
 
     .tumblr-web,
@@ -791,13 +786,14 @@ a:hover {
     .tumblr-mobile>.top-row {
         grid-row: 1;
         grid-column: 1 / 10;
-        letter-spacing: 1.5px;
+        letter-spacing: 4px;
     }
 
     .tumblr-mobile>.left-row {
         grid-row: 2 / 4;
         grid-column: 1;
         line-height: 132%;
+        margin-right: 6px;
     }
 
     .tumblr-mobile>.right-row {
@@ -813,7 +809,7 @@ a:hover {
     }
 
     .tumblr-mobile > .bottom-row > * {
-        letter-spacing: 1.5px;
+        letter-spacing: 4px;
     }
 
     .tumblr-mobile>a {
@@ -834,7 +830,19 @@ a:hover {
     }
 
     #dropdown-content-3, #dropdown-content-6, #dropdown-content-4, #dropdown-content-5 {
-        left: 163px;
+        left: 110px;
         top: 12px;
+    }
+    #dropdown-content-3 {
+        left: 114px;
+    }
+    .dropdown {
+        width: 100% !important;
+    }
+    .cake4freaks-section > .dropdown {
+        top: 25px;   
+    }
+    .henmania-section > .dropdown {
+        top: 25px !important;
     }
 }
